@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Alkemist UX/UI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="media/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="transition-overlay" style="background-color: #f0e2e1; opacity: 1; display: flex;"
+        class="transition-overlay" aria-hidden="true">
+        <video id="transition-video" muted playsinline>
+            <source src="media/transicion-papel3.mov" type="video/quicktime">
+            <source src="media/transicion-papel3.webm" type="video/webm">
+        </video>
+    </div>
+
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+    <header>
+        <a href="index.html" onclick="cambiarPagina(event, 'index.html')" aria-label="Inicio">
+            <svg id="logotipo" data-name="logotipo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1075 250"
+                aria-hidden="true" focusable="false">
+                <path class="logotipo"
+                    d="m119.02,15.35L23.79,242.98h29.02l23.38-57.44h84.05l22.55,57.44h33.56L120.83,15.35h-1.81Zm-32.49,144.8l32.45-79.7,31.3,79.7h-63.74Z" />
+                <rect class="logotipo" x="241.39" y="9" width="28.42" height="233.98" />
+                <polygon class="logotipo"
+                    points="405.97 129.92 388.74 115.11 324.35 166.67 324.35 9 295.92 9 295.92 242.98 324.35 242.98 324.35 195.98 340.41 182.98 379.06 242.98 412.01 242.98 359.92 167.19 405.97 129.92" />
+                <path class="logotipo"
+                    d="m526.99,127.2c-10.88-9.67-24.59-14.51-41.12-14.51-12.9,0-24.58,3.03-35.06,9.07-10.48,6.05-18.89,14.11-25.24,24.18-6.35,10.08-9.52,21.27-9.52,33.56,0,12.9,2.82,24.33,8.46,34.31,5.64,9.98,13.6,17.84,23.88,23.58,10.28,5.74,22.57,8.61,36.89,8.61,7.45,0,15.06-1.31,22.82-3.93,7.76-2.62,14.76-6.05,21.01-10.28l-12.69-20.86c-4.64,3.23-9.53,5.85-14.66,7.86-5.14,2.02-10.43,3.02-15.88,3.02-8.06,0-15.26-1.86-21.61-5.59-5.94-3.48-10.59-8.3-14.06-14.33l99.15-34.79c-4.03-16.93-11.49-30.23-22.37-39.9Zm-77.69,28.57c3.42-6.35,8.11-11.33,14.06-14.96,5.95-3.63,12.74-5.44,20.4-5.44,9.07,0,16.43,2.42,22.07,7.25,5.11,4.38,8.83,9.55,11.3,15.42l-72.52,26.77c-.27-2.21-.44-4.47-.44-6.82,0-8.46,1.71-15.87,5.14-22.22Z" />
+                <path class="logotipo"
+                    d="m727,112.69c-9.48,0-18.49,2.57-27.06,7.71-7.9,4.74-14.12,11.31-18.85,19.55-1.08-5.45-3.21-10.2-6.54-14.11-3.53-4.12-8.01-7.35-13.46-9.67-5.44-2.31-11.59-3.48-18.43-3.48-11.29,0-21.21,2.77-29.78,8.32-7.93,5.14-14.1,12.03-18.67,20.54l-2.04-23.71h-25.69v125.15h28.41v-58.95c0-8.26,1.62-15.92,4.84-22.97,3.22-7.05,7.66-12.74,13.3-17.08,5.64-4.33,12.09-6.5,19.34-6.5,7.26.2,12.44,2.47,15.57,6.8,3.12,4.33,4.78,9.73,4.99,16.17v82.53h28.41v-59.25c.2-8.26,1.86-15.87,4.99-22.82,3.12-6.95,7.56-12.59,13.3-16.93,5.75-4.33,12.24-6.5,19.5-6.5,7.26.2,12.34,2.47,15.27,6.8,2.92,4.33,4.48,9.73,4.68,16.17v82.53h28.41v-92.8c-.4-10.89-4.18-19.85-11.33-26.91-7.16-7.05-16.88-10.58-29.17-10.58Z" />
+                <rect class="logotipo" x="789.4" y="117.83" width="28.42" height="125.15" />
+                <path class="logotipo"
+                    d="m804.52,56.76c-4.24,0-8.12,1.51-11.64,4.53-3.53,3.03-5.29,6.76-5.29,11.19s1.76,8.42,5.29,11.34c3.53,2.92,7.4,4.38,11.64,4.38s8.05-1.46,11.48-4.38c3.43-2.92,5.14-6.7,5.14-11.34s-1.71-8.16-5.14-11.19c-3.43-3.02-7.25-4.53-11.48-4.53Z" />
+                <path class="logotipo"
+                    d="m916.86,176.17c-4.84-3.02-10.28-5.44-16.33-7.25-4.64-1.61-9.17-3.22-13.6-4.84-4.44-1.61-8.11-3.67-11.03-6.2-2.93-2.52-4.29-5.9-4.08-10.13,0-3.22.95-5.9,2.87-8.01,1.92-2.12,4.44-3.73,7.56-4.84,3.12-1.1,6.49-1.66,10.13-1.66,4.03,0,8.51.96,13.45,2.87,4.94,1.92,9.23,4.79,12.85,8.61l11.19-17.53c-6.04-5.04-12.5-8.61-19.34-10.73-6.86-2.12-14.62-3.17-23.28-3.17-9.47,0-17.53,1.87-24.18,5.59-6.65,3.73-11.64,8.46-14.97,14.21-3.32,5.74-4.99,11.94-4.99,18.59,0,8.67,2.72,16.02,8.16,22.07,5.45,6.05,13.3,10.78,23.58,14.21,5.23,1.41,10.07,2.92,14.51,4.53,4.43,1.62,8.11,3.68,11.04,6.2,2.92,2.52,4.38,6.1,4.38,10.73,0,3.83-1.06,6.95-3.17,9.37-2.12,2.42-4.89,4.13-8.32,5.14-3.43,1.01-7.15,1.51-11.19,1.51-5.44,0-10.88-1.26-16.32-3.78-5.45-2.52-10.88-6.29-16.33-11.34l-11.79,16.33c5.45,6.25,12.34,10.94,20.71,14.06,8.36,3.12,16.97,4.69,25.84,4.69,11.09,0,20.21-1.87,27.36-5.59,7.15-3.73,12.49-8.77,16.02-15.12,3.53-6.35,5.3-13.25,5.3-20.71,0-6.65-1.47-12.19-4.39-16.63-2.93-4.43-6.8-8.16-11.64-11.19Z" />
+                <polygon class="logotipo"
+                    points="997 62.81 968.28 62.81 968.28 118.43 945.61 118.43 945.61 140.5 968.28 140.5 968.28 242.98 997 242.98 997 140.5 1031.16 140.5 1031.16 118.43 997 118.43 997 62.81" />
+                <path class="logotipo"
+                    d="m1057.95,215.47c-3.32-3.22-6.8-4.84-10.43-4.84-4.03,0-7.71,1.62-11.03,4.84-3.33,3.23-4.99,7.06-4.99,11.48,0,4.84,1.66,8.72,4.99,11.64,3.32,2.92,7,4.38,11.03,4.38,3.63,0,7.11-1.46,10.43-4.38,3.33-2.92,4.99-6.8,4.99-11.64,0-4.43-1.66-8.26-4.99-11.48Z" />
+            </svg>
+        </a>
+
+        <nav class="desktop title-5" aria-label="Navegación principal">
+            <ul>
+                <li><a href="sobre-mi.html" class="pulsable" onclick="cambiarPagina(event, 'sobre-mi.html')">Sobre
+                        mí</a></li>
+                <li><a href="trayectoria.html" class="pulsable"
+                        onclick="cambiarPagina(event, 'trayectoria.html')">Trayectoria</a></li>
+
+                <li class="portfolio-dropdown">
+                    <a href="index.html" class="pulsable" id="portfolio-submenu-btn"
+                        onclick="cambiarPagina(event, 'index.html')">Portfolio</a>
+                    <nav class="menu-desplegable sub-desktop" aria-label="Submenú de Portfolio">
+                        <ul>
+                            <li><a href="uptak.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'uptak.html')">Uptak</a></li>
+                            <li><a href="campos.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'campos.html')">Campos</a></li>
+                            <li><a href="caceres-2031.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'caceres-2031.html')">Cáceres 2031</a></li>
+                        </ul>
+                    </nav>
+                </li>
+
+                <li><a href="contacto.html" class="btn btn-principal"
+                        onclick="cambiarPagina(event, 'contacto.html')">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-menu">
+            <button type="button" class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false"
+                aria-controls="menu-movil-lista">
+                <span class="l-1" aria-hidden="true"></span>
+                <span class="l-2" aria-hidden="true"></span>
+                <span class="l-3" aria-hidden="true"></span>
+            </button>
+
+            <nav class="menu-desplegable title-5" id="menu-movil-lista" aria-label="Navegación móvil">
+                <ul>
+                    <li><a href="sobre-mi.html" class="pulsable" onclick="cambiarPagina(event, 'sobre-mi.html')">Sobre
+                            mí</a></li>
+                    <li><a href="trayectoria.html" class="pulsable" onclick="cambiarPagina(event, 'trayectoria.html')">Trayectoria</a>
+                    </li>
+                    <li><a href="index.html" class="pulsable" onclick="cambiarPagina(event, 'index.html')">Portfolio</a>
+                    </li>
+                    <li><a href="contacto.html" class="pulsable"
+                            onclick="cambiarPagina(event, 'contacto.html')">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="paper">
+        <div class="color-overlay"></div>
+        <main id="contenido-principal" class="contenido-pagina">
+
+            <section class="presentacion">
+                <img class="foto-perfil" src="media/Foto de perfil.webp" alt="Fotografía de Paula Miguel" width="132px"
+                    height="132px" loading="lazy">
+                <h1 class="title-1">Soy Paula y mi trabajo es crear interfaces que <span>enamoran</span></h1>
+                <p class="texto">¿No me crees? Compruebalo ;)</p>
+            </section>
+
+            <section class="porfolio" id="porfolio">
+                <a href="uptak.html" class="tarjeta-porfolio" id="uptak" onclick="cambiarPagina(event, 'uptak.html')">
+                    <div class="keywords texto">
+                        <div class="label">Mobile-First</div>
+                        <div class="label label-secundaria">Design Systems</div>
+                        <div class="label label-secundaria">Front-end</div>
+                    </div>
+                </a>
+                <a href="campos.html" class="tarjeta-porfolio" id="campos"
+                    onclick="cambiarPagina(event, 'campos.html')">
+                    <div class="keywords texto">
+                        <div class="label">Motion UX</div>
+                        <div class="label label-secundaria">Microinteractions</div>
+                        <div class="label label-secundaria">UI Design</div>
+                    </div>
+                </a>
+                <a href="caceres-2031.html" class="tarjeta-porfolio" id="caceres"
+                    onclick="cambiarPagina(event, 'caceres-2031.html')">
+                    <div class="keywords texto">
+                        <div class="label">Accesibilidad</div>
+                        <div class="label label-secundaria">Tokens</div>
+                        <div class="label label-secundaria">Auto-Layout</div>
+                    </div>
+                </a>
+                <a href="" class="tarjeta-porfolio" id="" onclick="cambiarPagina(event, '')">
+                    <!-- <div class="keywords texto">
+                        <div class="label">Keyword</div>
+                        <div class="label label-secundaria">Keyword</div>
+                        <div class="label label-secundaria">Keyword</div>
+                    </div> /-->
+                    <p class="title-5" style="color: white;margin-top: 50%;">PRÓXIMAMENTE</p>
+                </a>
+            </section>
+
+            <section class="ventana">
+                <div class="interfaz-ventana">
+                    <p class="texto">Habilidades.jpg </p>
+                    <div class="iconos-interfaz">
+                        <div class="icon-min"></div>
+                        <div class="icon-max"></div>
+                        <div class="icon-cerrar"></div>
+                    </div>
+                </div>
+                <div class="contenido-ventana">
+                    <div class="titulo-ventana">
+                        <h3 class="title-3">Mis habilidades</h3>
+                        <p class="texto">¿Qué se me sa bien? ¿En qué me especializo?</p>
+                    </div>
+                    <div class="iconos-ventana">
+                        <div class="iconos-caja">
+                            <svg width="78" height="78" viewBox="0 0 78 78" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_86_104" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="78" height="78">
+                                    <rect width="77.6365" height="77.6365" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_86_104)">
+                                    <path
+                                        d="M19.4092 52.6909L5.5365 38.8183L19.4092 24.9456L21.6986 27.1728L10.0718 38.8183L21.6986 50.4637L19.4092 52.6909ZM32.7465 63.615L29.7106 62.6688L44.8901 14.0215L47.9875 14.9677L32.7465 63.615ZM58.2274 52.6909L55.9379 50.4637L67.5648 38.8183L55.9379 27.1728L58.2274 24.9456L72.1001 38.8183L58.2274 52.6909Z" />
+                                </g>
+                            </svg>
+                            <h4 class="title-5">Front-end</h4>
+                            <p class="texto">Tengo amplia experiencia en front-end, de hecho toda esta web está diseñada
+                                y desarrollada por mí.</p>
+                        </div>
+                        <div class="iconos-caja">
+                            <svg width="78" height="78" viewBox="0 0 78 78" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_86_113" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="78" height="78">
+                                    <rect width="77.6365" height="77.6365" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_86_113)">
+                                    <path
+                                        d="M14.5569 61.4623C13.1923 61.4623 12.0426 60.9946 11.1077 60.0591C10.1723 59.1243 9.70459 57.9746 9.70459 56.61V21.4002C9.70459 20.0357 10.2343 18.8234 11.2937 17.7634C12.3537 16.704 13.5659 16.1743 14.9305 16.1743H31.0425L37.5122 22.644H62.706C63.8221 22.644 64.7958 22.9457 65.6271 23.549C66.4585 24.1523 67.0402 24.9289 67.3723 25.8789H36.2118L29.7421 19.4092H14.9305C14.3498 19.4092 13.8727 19.5957 13.4991 19.9688C13.126 20.3424 12.9394 20.8196 12.9394 21.4002V56.2364C12.9394 56.693 13.0535 57.0664 13.2815 57.3564C13.5096 57.647 13.8102 57.8958 14.1832 58.1029L21.5118 33.5924H73.9666L66.6315 58.0349C66.3248 59.0631 65.7371 59.8915 64.8685 60.5201C63.9994 61.1482 63.0298 61.4623 61.9596 61.4623H14.5569ZM17.5556 58.2274H63.2042L69.5866 36.8272H23.9379L17.5556 58.2274Z" />
+                                </g>
+                            </svg>
+                            <h4 class="title-5">Accesibilidad</h4>
+                            <p class="texto">Puedo realizar auditorías de accesibilidad complejas y diseños accesibles.</p>
+                        </div>
+                        <div class="iconos-caja">
+                            <svg width="78" height="78" viewBox="0 0 78 78" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_86_110" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="78" height="78">
+                                    <rect width="77.6365" height="77.6365" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_86_110)">
+                                    <path
+                                        d="M16.784 36.2861L24.7094 39.639C25.7128 37.6318 26.8056 35.689 27.988 33.8106C29.1698 31.9317 30.4739 30.1048 31.9005 28.33L26.9366 27.3781C26.6045 27.2951 26.2829 27.3053 25.9718 27.4089C25.6607 27.5129 25.3809 27.6892 25.1324 27.9378L16.784 36.2861ZM27.2722 41.6924L36.4293 50.8308C38.9843 49.6776 41.5557 48.2114 44.1436 46.4322C46.7315 44.6531 49.2196 42.5693 51.608 40.1809C55.092 36.6969 57.7535 32.982 59.5925 29.036C61.432 25.09 62.4658 20.5332 62.6939 15.3655C57.5262 15.5936 52.9767 16.6274 49.0452 18.4669C45.1138 20.3059 41.4061 22.9674 37.9222 26.4513C35.5338 28.8397 33.45 31.3384 31.6708 33.9473C29.8917 36.5557 28.4255 39.1374 27.2722 41.6924ZM42.6071 30.5912C42.6071 29.2622 43.0818 28.1227 44.0312 27.1727C44.9812 26.2227 46.1341 25.7478 47.4901 25.7478C48.846 25.7478 49.999 26.2227 50.9489 27.1727C51.8989 28.1227 52.3739 29.2622 52.3739 30.5912C52.3739 31.9201 51.8989 33.0596 50.9489 34.0096C49.999 34.959 48.846 35.4337 47.4901 35.4337C46.1341 35.4337 44.9812 34.959 44.0312 34.0096C43.0818 33.0596 42.6071 31.9201 42.6071 30.5912ZM41.7733 61.3376L50.1216 52.9893C50.3702 52.7407 50.5465 52.4609 50.6505 52.1498C50.754 51.8387 50.7643 51.5171 50.6813 51.185L49.7294 46.2212C47.9545 47.6477 46.1277 48.9489 44.2488 50.1248C42.3704 51.3007 40.4276 52.3903 38.4204 53.3936L41.7733 61.3376ZM65.7177 12.3854C66.0783 18.3284 65.2373 23.7955 63.1945 28.7869C61.1522 33.7783 57.9702 38.4346 53.6484 42.7558C53.4414 42.9634 53.2549 43.1502 53.0888 43.3163C52.9227 43.4818 52.7362 43.6683 52.5292 43.8759L53.8352 50.5138C54.0094 51.3845 53.9762 52.2283 53.7358 53.0451C53.4953 53.8624 53.06 54.5862 52.4297 55.2165L40.6476 66.9363L35.285 54.3018L23.7576 42.7744L11.123 37.3504L22.8243 25.6297C23.4546 24.9994 24.1813 24.5536 25.0046 24.2921C25.8279 24.0311 26.6751 23.9877 27.5464 24.1619L34.308 25.5302C34.5156 25.3232 34.6919 25.1366 34.8369 24.9706C34.982 24.8045 35.1583 24.618 35.3658 24.411C39.6871 20.0892 44.3401 16.9145 49.325 14.8867C54.31 12.8585 59.7742 12.0247 65.7177 12.3854ZM16.5536 52.2986C17.8184 51.0338 19.356 50.4087 21.1665 50.4232C22.9769 50.4378 24.5145 51.0775 25.7794 52.3423C27.0442 53.6071 27.6736 55.1448 27.6677 56.9552C27.6612 58.7656 27.0256 60.3033 25.7608 61.5681C24.6614 62.6669 22.8979 63.6082 20.4702 64.3921C18.0419 65.176 15.2329 65.7173 12.0434 66.016C12.342 62.8265 12.8936 60.0178 13.698 57.59C14.5029 55.1617 15.4548 53.3979 16.5536 52.2986ZM18.8616 54.6504C18.2395 55.2725 17.6588 56.2875 17.1197 57.6952C16.5805 59.1034 16.2239 60.5561 16.0497 62.0533C17.5469 61.8792 18.9996 61.5153 20.4079 60.9616C21.8156 60.4079 22.8305 59.8199 23.4527 59.1978C24.0997 58.5508 24.4293 57.7793 24.4417 56.8832C24.4541 55.9877 24.1369 55.2165 23.4899 54.5695C22.8429 53.9225 22.0717 53.6125 21.1762 53.6395C20.2801 53.6664 19.5086 54.0034 18.8616 54.6504Z" />
+                                </g>
+                            </svg>
+                            <h4 class="title-5">Autodidacta</h4>
+                            <p class="texto">Me encanta aprender, ya sea leer, ir a charlas o ver tutoriales: Siempre intento mejorarme como profesional.</p>
+                        </div>
+                        <div class="iconos-caja">
+                            <svg width="78" height="78" viewBox="0 0 78 78" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_86_107" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="74" height="74">
+                                    <rect width="74" height="74" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_86_107)">
+                                    <path
+                                        d="M20.0417 17.9071C18.6223 17.9071 17.398 17.3922 16.3687 16.3624C15.3388 15.3326 14.8239 14.1082 14.8239 12.6894C14.8239 11.27 15.3388 10.0454 16.3687 9.01558C17.398 7.98574 18.6223 7.47083 20.0417 7.47083C21.461 7.47083 22.6854 7.98574 23.7147 9.01558C24.7445 10.0454 25.2594 11.27 25.2594 12.6894C25.2594 14.1082 24.7445 15.3326 23.7147 16.3624C22.6854 17.3922 21.461 17.9071 20.0417 17.9071ZM14.9426 66.2916V46.0125H9.48743V27.8686C9.48743 26.4888 9.97254 25.3138 10.9428 24.3436C11.9135 23.3729 13.0885 22.8875 14.4678 22.8875H25.6156C26.9949 22.8875 28.1699 23.3729 29.1406 24.3436C30.1108 25.3138 30.5959 26.4888 30.5959 27.8686V35.6602C28.0306 37.3124 25.8872 39.6249 24.1656 42.5977C22.4441 45.57 21.5833 48.843 21.5833 52.4166C21.5833 54.7923 21.9549 57.011 22.698 59.0727C23.4411 61.1339 24.374 62.8444 25.4969 64.2042V66.2916H14.9426ZM41.7437 66.4103C37.9132 66.4103 34.6233 65.0356 31.874 62.2863C29.1247 59.537 27.75 56.2471 27.75 52.4166C27.75 49.6853 28.4982 47.1641 29.9947 44.8532C31.4906 42.5427 33.549 40.8145 36.1698 39.6685V43.054C34.5059 44.1132 33.2003 45.4452 32.2532 47.05C31.3066 48.6554 30.8333 50.4443 30.8333 52.4166C30.8333 55.4999 31.8809 58.0891 33.976 60.1843C36.0712 62.2794 38.6604 63.3269 41.7437 63.3269C44.4714 63.3269 46.9024 62.3978 49.0366 60.5396C51.1713 58.6819 52.3573 56.2707 52.5947 53.3061H55.6781C55.3615 57.1366 53.8879 60.2783 51.2573 62.7311C48.6267 65.1839 45.4555 66.4103 41.7437 66.4103ZM64.9335 58.6071L57.7177 47.7916H41.625V26.2082H44.7083V44.7082H59.449L67.5489 56.9352L64.9335 58.6071Z" />
+                                </g>
+                            </svg>
+                            <h4 class="title-5">Hand-off</h4>
+                            <p class="texto">Mi experiencia en front-end me permite crear documentación y entregables claros para desarrollo.</p>
+                        </div>
+                    </div>
+                    <p class="texto">¿Quieres conocerme mejor? <a class="enlace">Saber más</a></p>
+                </div>
+            </section>
+
+            <section class="trayectoria">
+                <div class="titulo-trayectoria">
+                    <div class="textos-trayectoria">
+                        <h2 class="title-2">Mi trayectoria</h2>
+                        <p>Lo cierto es que mis logros hablan más de mí que cualquier cosa que pueda explicar. </p>
+                    </div>
+                    <a class="btn btn-principal" href="trayectoria.html"
+                        onclick="cambiarPagina(event, 'trayectoria.html')">Saber más...</a>
+                </div>
+                <div class="tarjetas-trayectoria">
+                    <div class="tarjeta-trayect">
+                        <div style="background-image: url(media/trayectoria/ESI.webp);" loading="lazy">
+                            <div class="label">2025</div>
+                        </div>
+                        <p>Volví a la misma universidad donde había terminado mis estudios, para dar clase de su nueva
+                            asignatura de diseño UX/UI...</p>
+                    </div>
+                    <div class="tarjeta-trayect">
+                        <div style="background-image: url(media/trayectoria/foto\ baianai.webp);" loading="lazy">
+                            <div class="label">2024</div>
+                        </div>
+                        <p>Comencé a trabajar en BAIANAI SL como diseñadora UX/UI a tiempo completo. Tras haber
+                            realizado unas prácticas extracurriculares...</p>
+                    </div>
+                    <div class="tarjeta-trayect">
+                        <div style="background-image: url(media/trayectoria/graduacion.webp);" loading="lazy">
+                            <div class="label">2024</div>
+                        </div>
+                        <p>Finalizé la carrera universitaria de diseño gráfico en ESI Valladolid. Mi proyecto de TFG,
+                            Nikki, fue puntuado con la nota máxima...</p>
+                    </div>
+                    <div class="tarjeta-trayect">
+                        <div style="background-image: url(media/trayectoria/ajedrez.webp);" loading="lazy">
+                            <div class="label">2008</div>
+                        </div>
+                        <p>Mi madre hizo un curso de HTML y CSS. Cuando me aburría cogía los manuales para luego
+                            escribir código, en papel. Cuando mi madre vió una libreta llena de HTML y garabatos...</p>
+                    </div>
+                </div>
+                <div class="linea-tiempo">
+                    <div class="linea linea-1"></div>
+                    <div class="linea linea-2"></div>
+                    <div class="linea linea-3"></div>
+                    <div class="linea linea-4">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="linea linea-5"></div>
+                    <div class="vertical ver-1"></div>
+                    <div class="vertical ver-2"></div>
+                    <div class="vertical ver-3"></div>
+                    <div class="vertical ver-4"></div>
+                    <div class="circulo circulo-1"></div>
+                    <div class="circulo circulo-2"></div>
+                    <div class="circulo circulo-3"></div>
+                    <div class="circulo circulo-4"></div>
+                </div>
+            </section>
+            <section class="cta" loading="lazy">
+                <div>
+                    <img class="foto-perfil" src="media/Foto de perfil.webp" alt="Fotografía de Paula Miguel"
+                        width="200px" height="200px">
+                    <div class="contenido-cta">
+                        <h3 class="title-3">¿Suena bien?<span> Hablemos</span></h3>
+                        <p>Me encantaría conocerte, si quieres tener una conversación puedes encontrar como en la página de contacto.
+                        </p>
+                        <div class="botones-cta">
+                            <a href="contacto.html" class="btn btn-secundario"
+                                onclick="cambiarPagina(event, 'contacto.html')">Contacto</a>
+                            <a href="sobre-mi.html" class="btn btn-principal"
+                                onclick="cambiarPagina(event, 'sobre-mi.html')">Saber más</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="contenido-footer">
+                <div class="columna-contacto">
+                    <svg id="logotipo-footer" data-name="logotipo" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 1075 250" aria-hidden="true">
+                        <path class="logotipo"
+                            d="m119.02,15.35L23.79,242.98h29.02l23.38-57.44h84.05l22.55,57.44h33.56L120.83,15.35h-1.81Zm-32.49,144.8l32.45-79.7,31.3,79.7h-63.74Z" />
+                        <rect class="logotipo" x="241.39" y="9" width="28.42" height="233.98" />
+                        <polygon class="logotipo"
+                            points="405.97 129.92 388.74 115.11 324.35 166.67 324.35 9 295.92 9 295.92 242.98 324.35 242.98 324.35 195.98 340.41 182.98 379.06 242.98 412.01 242.98 359.92 167.19 405.97 129.92" />
+                        <path class="logotipo"
+                            d="m526.99,127.2c-10.88-9.67-24.59-14.51-41.12-14.51-12.9,0-24.58,3.03-35.06,9.07-10.48,6.05-18.89,14.11-25.24,24.18-6.35,10.08-9.52,21.27-9.52,33.56,0,12.9,2.82,24.33,8.46,34.31,5.64,9.98,13.6,17.84,23.88,23.58,10.28,5.74,22.57,8.61,36.89,8.61,7.45,0,15.06-1.31,22.82-3.93,7.76-2.62,14.76-6.05,21.01-10.28l-12.69-20.86c-4.64,3.23-9.53,5.85-14.66,7.86-5.14,2.02-10.43,3.02-15.88,3.02-8.06,0-15.26-1.86-21.61-5.59-5.94-3.48-10.59-8.3-14.06-14.33l99.15-34.79c-4.03-16.93-11.49-30.23-22.37-39.9Zm-77.69,28.57c3.42-6.35,8.11-11.33,14.06-14.96,5.95-3.63,12.74-5.44,20.4-5.44,9.07,0,16.43,2.42,22.07,7.25,5.11,4.38,8.83,9.55,11.3,15.42l-72.52,26.77c-.27-2.21-.44-4.47-.44-6.82,0-8.46,1.71-15.87,5.14-22.22Z" />
+                        <path class="logotipo"
+                            d="m727,112.69c-9.48,0-18.49,2.57-27.06,7.71-7.9,4.74-14.12,11.31-18.85,19.55-1.08-5.45-3.21-10.2-6.54-14.11-3.53-4.12-8.01-7.35-13.46-9.67-5.44-2.31-11.59-3.48-18.43-3.48-11.29,0-21.21,2.77-29.78,8.32-7.93,5.14-14.1,12.03-18.67,20.54l-2.04-23.71h-25.69v125.15h28.41v-58.95c0-8.26,1.62-15.92,4.84-22.97,3.22-7.05,7.66-12.74,13.3-17.08,5.64-4.33,12.09-6.5,19.34-6.5,7.26.2,12.44,2.47,15.57,6.8,3.12,4.33,4.78,9.73,4.99,16.17v82.53h28.41v-59.25c.2-8.26,1.86-15.87,4.99-22.82,3.12-6.95,7.56-12.59,13.3-16.93,5.75-4.33,12.24-6.5,19.5-6.5,7.26.2,12.34,2.47,15.27,6.8,2.92,4.33,4.48,9.73,4.68,16.17v82.53h28.41v-92.8c-.4-10.89-4.18-19.85-11.33-26.91-7.16-7.05-16.88-10.58-29.17-10.58Z" />
+                        <rect class="logotipo" x="789.4" y="117.83" width="28.42" height="125.15" />
+                        <path class="logotipo"
+                            d="m804.52,56.76c-4.24,0-8.12,1.51-11.64,4.53-3.53,3.03-5.29,6.76-5.29,11.19s1.76,8.42,5.29,11.34c3.53,2.92,7.4,4.38,11.64,4.38s8.05-1.46,11.48-4.38c3.43-2.92,5.14-6.7,5.14-11.34s-1.71-8.16-5.14-11.19c-3.43-3.02-7.25-4.53-11.48-4.53Z" />
+                        <path class="logotipo"
+                            d="m916.86,176.17c-4.84-3.02-10.28-5.44-16.33-7.25-4.64-1.61-9.17-3.22-13.6-4.84-4.44-1.61-8.11-3.67-11.03-6.2-2.93-2.52-4.29-5.9-4.08-10.13,0-3.22.95-5.9,2.87-8.01,1.92-2.12,4.44-3.73,7.56-4.84,3.12-1.1,6.49-1.66,10.13-1.66,4.03,0,8.51.96,13.45,2.87,4.94,1.92,9.23,4.79,12.85,8.61l11.19-17.53c-6.04-5.04-12.5-8.61-19.34-10.73-6.86-2.12-14.62-3.17-23.28-3.17-9.47,0-17.53,1.87-24.18,5.59-6.65,3.73-11.64,8.46-14.97,14.21-3.32,5.74-4.99,11.94-4.99,18.59,0,8.67,2.72,16.02,8.16,22.07,5.45,6.05,13.3,10.78,23.58,14.21,5.23,1.41,10.07,2.92,14.51,4.53,4.43,1.62,8.11,3.68,11.04,6.2,2.92,2.52,4.38,6.1,4.38,10.73,0,3.83-1.06,6.95-3.17,9.37-2.12,2.42-4.89,4.13-8.32,5.14-3.43,1.01-7.15,1.51-11.19,1.51-5.44,0-10.88-1.26-16.32-3.78-5.45-2.52-10.88-6.29-16.33-11.34l-11.79,16.33c5.45,6.25,12.34,10.94,20.71,14.06,8.36,3.12,16.97,4.69,25.84,4.69,11.09,0,20.21-1.87,27.36-5.59,7.15-3.73,12.49-8.77,16.02-15.12,3.53-6.35,5.3-13.25,5.3-20.71,0-6.65-1.47-12.19-4.39-16.63-2.93-4.43-6.8-8.16-11.64-11.19Z" />
+                        <polygon class="logotipo"
+                            points="997 62.81 968.28 62.81 968.28 118.43 945.61 118.43 945.61 140.5 968.28 140.5 968.28 242.98 997 242.98 997 140.5 1031.16 140.5 1031.16 118.43 997 118.43 997 62.81" />
+                        <path class="logotipo"
+                            d="m1057.95,215.47c-3.32-3.22-6.8-4.84-10.43-4.84-4.03,0-7.71,1.62-11.03,4.84-3.33,3.23-4.99,7.06-4.99,11.48,0,4.84,1.66,8.72,4.99,11.64,3.32,2.92,7,4.38,11.03,4.38,3.63,0,7.11-1.46,10.43-4.38,3.33-2.92,4.99-6.8,4.99-11.64,0-4.43-1.66-8.26-4.99-11.48Z" />
+                    </svg>
+
+                    <div class="datos-contacto title-5">
+                        <a href="tel:+34633593246" aria-label="Llamar al teléfono +34 633 59 32 46">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <mask id="mask0_103_126" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="20" height="20">
+                                    <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_103_126)">
+                                    <path
+                                        d="M15.471 16.5625C13.9561 16.4375 12.4999 16.0377 11.1024 15.3629C9.70509 14.6882 8.43988 13.7831 7.30682 12.6475C6.17391 11.5118 5.27703 10.25 4.6162 8.8621C3.95536 7.47433 3.5555 6.02301 3.41661 4.50815C3.38884 4.21412 3.47418 3.9587 3.67266 3.7419C3.87099 3.52509 4.11898 3.41669 4.41661 3.41669H6.59286C6.84495 3.41669 7.06182 3.49231 7.24349 3.64356C7.42516 3.79467 7.55175 3.99203 7.62328 4.23565L8.05932 5.97919C8.09238 6.16502 8.08196 6.34662 8.02807 6.52398C7.97405 6.70134 7.88613 6.84558 7.76432 6.95669L5.83974 8.83023C6.14946 9.41134 6.49293 9.95835 6.87016 10.4713C7.24724 10.984 7.6605 11.4636 8.10995 11.91C8.5537 12.3536 9.03307 12.7645 9.54807 13.1427C10.0631 13.5209 10.6192 13.865 11.2164 14.1748L13.1906 12.2469C13.3071 12.1251 13.4407 12.0438 13.5914 12.0031C13.742 11.9626 13.9102 11.9562 14.0962 11.984L15.7643 12.3511C16.0164 12.4205 16.2159 12.5487 16.3629 12.7356C16.5098 12.9226 16.5833 13.1448 16.5833 13.4023V15.5625C16.5833 15.8602 16.4714 16.1081 16.2477 16.3065C16.0239 16.505 15.765 16.5903 15.471 16.5625ZM5.35245 7.77252L6.92307 6.26606C6.94974 6.24467 6.9671 6.2153 6.97516 6.17794C6.98321 6.14058 6.98189 6.10585 6.9712 6.07377L6.60557 4.62815C6.59488 4.58551 6.5762 4.55349 6.54953 4.5321C6.52286 4.51071 6.48814 4.50002 6.44536 4.50002H4.64578C4.6137 4.50002 4.58696 4.51071 4.56557 4.5321C4.54432 4.55349 4.5337 4.58023 4.5337 4.61231C4.57634 5.14009 4.66953 5.66648 4.81328 6.19148C4.95689 6.71662 5.13662 7.24363 5.35245 7.77252ZM12.3108 14.6827C12.809 14.9019 13.3299 15.0684 13.8735 15.1821C14.4172 15.2957 14.922 15.3793 15.3877 15.4327C15.4197 15.4327 15.4465 15.422 15.4679 15.4006C15.4893 15.3793 15.4999 15.3525 15.4999 15.3204V13.5256C15.4999 13.4829 15.4893 13.4481 15.4679 13.4215C15.4465 13.3948 15.4145 13.3761 15.3718 13.3654L14.0177 13.0721C13.9856 13.0614 13.9575 13.0601 13.9335 13.0681C13.9095 13.0762 13.884 13.0936 13.8735 13.1202L12.3108 14.6827Z"
+                                        fill="#FDAC0A" />
+                                </g>
+                            </svg>
+                            <span class="pulsable">+34 633 59 32 46</span>
+                        </a>
+
+                        <a href="mailto:paula@alkemist.es" aria-label="Enviar correo electrónico a paula@alkemist.es">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <mask id="mask0_103_127" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="20" height="20">
+                                    <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_103_127)">
+                                    <path
+                                        d="M3.75642 15.5834C3.38128 15.5834 3.0642 15.4538 2.80517 15.1946C2.54614 14.9354 2.41663 14.6181 2.41663 14.2427V5.75065C2.41663 5.37523 2.54614 5.05905 2.80517 4.8021C3.0642 4.54516 3.38128 4.41669 3.75642 4.41669H16.2435C16.6186 4.41669 16.9357 4.54627 17.1948 4.80544C17.4538 5.0646 17.5833 5.38189 17.5833 5.75731V14.2494C17.5833 14.6248 17.4538 14.941 17.1948 15.1979C16.9357 15.4549 16.6186 15.5834 16.2435 15.5834H3.75642ZM9.99996 10.6315L3.49996 6.80606V14.2436C3.49996 14.3184 3.52399 14.3799 3.57204 14.4279C3.6201 14.476 3.68156 14.5 3.75642 14.5H16.2435C16.3184 14.5 16.3798 14.476 16.4279 14.4279C16.4759 14.3799 16.5 14.3184 16.5 14.2436V6.80606L9.99996 10.6315ZM9.99996 9.22919L16.3718 5.50002H3.62808L9.99996 9.22919ZM3.49996 6.80606V5.50002V14.2436C3.49996 14.3184 3.52399 14.3799 3.57204 14.4279C3.6201 14.476 3.68156 14.5 3.75642 14.5H3.49996V6.80606Z"
+                                        fill="#FDAC0A" />
+                                </g>
+                            </svg>
+                            <span class="pulsable">paula@alkemist.es</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/paula-miguel-alkemist/"
+                            aria-label="Visitar perfil de LinkedIn de Paula Miguel">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <mask id="mask0_103_128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="20" height="20">
+                                    <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_103_128)">
+                                    <path
+                                        d="M9.82857 8.14857C10.4574 7.50606 11.2761 7.08571 12.2286 7.08571C13.2288 7.08571 14.1881 7.48306 14.8954 8.19034C15.6027 8.89762 16 9.8569 16 10.8571V16H14.6286V10.8571C14.6286 10.2206 14.3757 9.61017 13.9256 9.16009C13.4755 8.71 12.8651 8.45714 12.2286 8.45714C11.5921 8.45714 10.9816 8.71 10.5315 9.16009C10.0814 9.61017 9.82857 10.2206 9.82857 10.8571V16H8.45714V7.42857H9.82857V8.14857ZM5.02857 6.05714C4.75578 6.05714 4.49416 5.94878 4.30126 5.75588C4.10837 5.56299 4 5.30137 4 5.02857C4 4.75578 4.10837 4.49416 4.30126 4.30126C4.49416 4.10837 4.75578 4 5.02857 4C5.30137 4 5.56299 4.10837 5.75588 4.30126C5.94878 4.49416 6.05714 4.75578 6.05714 5.02857C6.05714 5.30137 5.94878 5.56299 5.75588 5.75588C5.56299 5.94878 5.30137 6.05714 5.02857 6.05714ZM4.34286 7.42857H5.71429V16H4.34286V7.42857Z"
+                                        fill="#FDAC0A" />
+                                </g>
+                            </svg>
+                            <span class="pulsable">/paula-miguel-alkemist/</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="columna-links title-5">
+                    <nav aria-label="Enlaces de proyectos">
+                        <p class="title-4" id="heading-portfolio">Portfolio</p>
+                        <ul aria-labelledby="heading-portfolio">
+                            <li><a href="uptak.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'uptak.html')">Uptak</a></li>
+                            <li><a href="campos.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'campos.html')">Campos</a></li>
+                            <li><a href="caceres-2031.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'caceres-2031.html')">Cáceres 31</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav aria-label="Enlaces secundarios">
+                        <p class="title-4" id="heading-paginas">Páginas</p>
+                        <ul aria-labelledby="heading-paginas">
+                            <li><a href="index.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'index.html')">Inicio</a></li>
+                            <li><a href="sobre-mi.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'sobre-mi.html')">Sobre mí</a></li>
+                            <li><a href="trayectoria.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'trayectoria.html')">Trayectoria</a></li>
+                            <li><a href="portfolio.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'portfolio.html')">Porfolio</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="separador"></div>
+
+            <div class="legal">
+                <span>Copyright © Paula Miguel 2026. Todos los derechos reservados</span>
+                <div class="links-legal">
+                    <a href="politica-privacidad.html" onclick="cambiarPagina(event, 'politica-privacidad.html')"
+                        class="pulsable">Política de privacidad</a>
+                    <span aria-hidden="true"> &#9679; </span>
+                    <a href="Aviso-legal.html" onclick="cambiarPagina(event, 'Aviso-legal.html')" class="pulsable">Aviso
+                        legal</a>
+                    <span aria-hidden="true"> &#9679; </span>
+                    <a href="Accesibilidad.html" onclick="cambiarPagina(event, 'Accesibilidad.html')" class="pulsable">Accesibilidad</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="transicion.js"></script>
+</body>
+
+</html>

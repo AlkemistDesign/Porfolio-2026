@@ -622,7 +622,7 @@ section.cta{
 }
 
 .cta span{
-  color: var(--principal-500);
+  color: var(--principal-800);
   font-weight: 700;
 }
 
@@ -677,7 +677,7 @@ section.cta{
 
 .texto a.enlace{
   text-decoration: underline;
-  color: var(--principal-700);
+  color: var(--principal-800);
   font-weight: 600;
 }
 
@@ -891,5 +891,42 @@ footer .contenido-footer, .columna-links {
 
   .btn-secundario:hover{
     transform: translateY(0);
+  }
+}
+
+/* ----------------------------------- Contraste alto ----------------------------------- */
+.texto-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (forced-colors: active) {
+  .texto-oculto {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: CanvasText; 
+  }
+
+  .tarjeta-porfolio {
+    border: 2px solid transparent;
+  }
+
+  a.tarjeta-porfolio {
+    background-image: none !important;
   }
 }

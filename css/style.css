@@ -222,7 +222,7 @@ body {
   position: absolute;
   top: -100px;
   left: 20px;
-  background-color: var(--principal-700);
+  background-color: var(--principal-800);
   color: white;
   padding: 12px 24px;
   border-radius: 0 0 8px 8px;

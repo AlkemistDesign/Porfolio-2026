@@ -24,8 +24,8 @@
         </video>
     </div>
 
-    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
-    <header>
+    
+    <header><a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
         <a href="index.html" onclick="cambiarPagina(event, 'index.html')" aria-label="Inicio">
             <svg id="logotipo" data-name="logotipo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1075 250"
                 aria-hidden="true" focusable="false">
@@ -100,10 +100,10 @@
         </div>
     </header>
 
-    <div class="hero-porfolio" style="background-image: url(media/campos/CAMPOS_logo.webp);background-color: #158045;">
+    <section class="hero-porfolio" style="background-image: url(media/campos/CAMPOS_logo.webp);background-color: #158045;">
         <div class="ventana">
             <div class="interfaz-ventana">
-                <p class="texto">Campos.jpg </p>
+                <h1 class="texto">Campos.jpg </h1>
                 <div class="iconos-interfaz">
                     <div class="icon-min"></div>
                     <div class="icon-max"></div>
@@ -135,12 +135,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="paper">
         <div class="color-overlay"></div>
         <main id="contenido-principal" class="contenido-pagina">
             <section class="dos-columnas derecha">
-                <img class="img" src="media/campos/Campos Mockup.webp">
+                <img class="img" src="media/campos/Campos Mockup.webp" alt="portátil encima de un arbol seco con la web de Campos abierta">
                 <div>
                     <h2 class="title-5">RESUMEN</h2>
                     <h3 class="title-3">Project overview</h3>
@@ -188,11 +188,11 @@
                         </li>
                     </ul>
                 </div>
-                <img class="img" src="media/campos/moodboard campos.webp">
+                <img class="img" src="media/campos/moodboard campos.webp" alt="tabla de corte para manualidades con fotografías de campos">
             </section>
 
             <section class="dos-columnas derecha">
-                <img class="img" src="media/campos/reticula campos.webp">
+                <img class="img" src="media/campos/reticula campos.webp" alt="captura de pantalla del footer de la web de campos con líneas blancas">
                 <div>
                     <h2 class="title-5">BENCHMARKING</h2>
                     <h3 class="title-3">Investigación y Enfoque creativo</h3>
@@ -223,7 +223,7 @@
                         se realizaba a la par que el diseño, para asegurar la viabilidad de los elementos.
                     </p>
                 </div>
-                <video loading="lazy" class="img" src="media/campos/animacion campos.mp4" autoplay muted playsinline
+                <video loading="lazy" controls class="img" src="media/campos/animacion campos.mp4" autoplay muted playsinline
                 loop></video>
             </section>
 
@@ -237,7 +237,7 @@
                         directa a cerrar un acuerdo de distribución con Castilla y León televisión.
                     </p>
                     <div>
-                        <a class="btn btn-principal" href="https://camposdoc.com/" target="_blank">Visita campos</a>
+                        <a class="btn btn-principal" aria-label="Visitar Campos (se abre en una ventana nueva)" href="https://camposdoc.com/" target="_blank">Visita campos</a>
                     </div>
                 </div>
             </section>
@@ -318,7 +318,7 @@
                         </a>
 
                         <a href="https://www.linkedin.com/in/paula-miguel-alkemist/"
-                            aria-label="Visitar perfil de LinkedIn de Paula Miguel">
+                            aria-label="Visitar perfil de LinkedIn de /paula-miguel-alkemist/">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -390,6 +390,7 @@
             --principal-400: #88cf95;
             --principal-500: #389060;
             --principal-700: #158045;
+            --principal-800: #0a4525;
             --color-fondo: #ffffff;
             --color-contraste: #000000;
             --conclusiones: #ffffff;

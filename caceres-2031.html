@@ -24,8 +24,8 @@
         </video>
     </div>
 
-    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
-    <header>
+    
+    <header><a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
         <a href="index.html" onclick="cambiarPagina(event, 'index.html')" aria-label="Inicio">
             <svg id="logotipo" data-name="logotipo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1075 250"
                 aria-hidden="true" focusable="false">
@@ -100,10 +100,10 @@
         </div>
     </header>
 
-    <div class="hero-porfolio" style="background-image: url(media/caceres/Caceres_logo.webp);">
+    <section class="hero-porfolio" style="background-image: url(media/caceres/Caceres_logo.webp);">
         <div class="ventana">
             <div class="interfaz-ventana">
-                <p class="texto">Cáceres.jpg </p>
+                <h1 class="texto">Cáceres.jpg </h1>
                 <div class="iconos-interfaz">
                     <div class="icon-min"></div>
                     <div class="icon-max"></div>
@@ -135,12 +135,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="paper">
         <div class="color-overlay"></div>
         <main id="contenido-principal" class="contenido-pagina">
             <section class="dos-columnas derecha">
-                <video loading="lazy" class="img" src="media/caceres/web_antigua.mp4" autoplay muted playsinline
+                <video loading="lazy" class="img" src="media/caceres/web_antigua.mp4" autoplay muted playsinline controls
                     loop></video>
                 <p class="label label-secundaria">Web antigua</p>
                 <div>
@@ -182,12 +182,12 @@
                             sector público.</li>
                     </ul>
                 </div>
-                <video loading="lazy" class="img" src="media/caceres/Video_home.mp4" autoplay muted playsinline
+                <video loading="lazy" class="img" controls src="media/caceres/Video_home.mp4" autoplay muted playsinline
                     loop></video>
             </section>
 
             <section class="dos-columnas derecha">
-                <img class="img" src="media/caceres/sistema.JPG">
+                <img class="img" src="media/caceres/sistema.JPG" alt="captura de pantalla del sistema de diseño de Cáceres 2031">
                 <div>
                     <h2 class="title-5">TOKENS, COMPONENTES Y VARIANTES</h2>
                     <h3 class="title-3">Sistema de diseño</h3>
@@ -207,7 +207,7 @@
                         rápida que
                         eliminara la fatiga cognitiva.
                     </p>
-                    <h4 class="title-5">Accesibilidad Institucional Certificada (WCAG AA)</h4><br>
+                    <h4 class="title-5">Accesibilidad Institucional Certificada (WCAG AA)</h4>
                     <p class="texto">
                         Todo el sistema de componentes se diseñó bajo
                         las normativas internacionales de accesibilidad AA. Se validaron los ratios de contraste
@@ -220,7 +220,7 @@
             </section>
 
             <section class="dos-columnas sola">
-                <img class="img" src="media/caceres/mockup-web.webp">
+                <img class="img" src="media/caceres/mockup-web.webp" alt="tres portátiles con la web de Cáceres 2031 abierta">
             </section>
 
             <section class="dos-columnas">
@@ -244,7 +244,7 @@
                             asesoramiento en la Oficina de Activación de la candidatura.</li>
                     </ul>
                 </div>
-                <img class="img" src="media/caceres/eventos.JPG">
+                <img class="img" src="media/caceres/eventos.JPG" alt="Captura de pantalla del calendario de eventos en la web de Cáceres 2031">
             </section>
 
             <section class="dos-columnas conclusiones derecha"
@@ -264,8 +264,8 @@
                         Gran Canaria y Oviedo.
                     </p>
                     <div>
-                        <a class="btn btn-principal" href="https://caceres2031.org/" target="_blank">Visita la web</a>
-                        <a class="btn btn-secundario" href="https://www.figma.com/design/9ALnjE0qDA4mIMWzT1hNOV/C%C3%A1ceres-2031?node-id=0-1&t=wyiZhs2oS1rUFN8Z-1" target="_blank">Ver en Figma</a>
+                        <a class="btn btn-principal" aria-label="Visitar Cáceres 2031 (se abre en una ventana nueva)" href="https://caceres2031.org/" target="_blank">Visita la web</a>
+                        <a class="btn btn-secundario" aria-label="Ver en Figma (se abre en una ventana nueva)" href="https://www.figma.com/design/9ALnjE0qDA4mIMWzT1hNOV/C%C3%A1ceres-2031?node-id=0-1&t=wyiZhs2oS1rUFN8Z-1" target="_blank">Ver en Figma</a>
                     </div>
                 </div>
             </section>
@@ -347,7 +347,7 @@
                         </a>
 
                         <a href="https://www.linkedin.com/in/paula-miguel-alkemist/"
-                            aria-label="Visitar perfil de LinkedIn de Paula Miguel">
+                            aria-label="Visitar perfil de LinkedIn de /paula-miguel-alkemist/">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -419,6 +419,7 @@
             --principal-400: #ff6cb6;
             --principal-500: #d10069;
             --principal-700: #e00674;
+            --principal-800: #890245;
             --color-fondo: #ffffff;
             --color-contraste: #000000;
             --conclusiones: #ffffff;

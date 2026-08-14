@@ -24,8 +24,8 @@
         </video>
     </div>
 
-    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
-    <header>
+    
+    <header><a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
         <a href="index.html" onclick="cambiarPagina(event, 'index.html')" aria-label="Inicio">
             <svg id="logotipo" data-name="logotipo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1075 250"
                 aria-hidden="true" focusable="false">
@@ -100,10 +100,10 @@
         </div>
     </header>
     
-    <div class="hero-porfolio" style="background-image: url(media/uptak/UPTAK_logo.webp);background-color: #2b2b2b;">
+    <section class="hero-porfolio" style="background-image: url(media/uptak/UPTAK_logo.webp);background-color: #2b2b2b;">
         <div class="ventana">
             <div class="interfaz-ventana">
-                <p class="texto">Uptak.jpg </p>
+                <h1 class="texto">Uptak.jpg </h1>
                 <div class="iconos-interfaz">
                     <div class="icon-min"></div>
                     <div class="icon-max"></div>
@@ -135,12 +135,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="paper">
         <div class="color-overlay"></div>
         <main id="contenido-principal" class="contenido-pagina">
             <section class="dos-columnas derecha">
-                <img class="img" src="media/uptak/uptak mock up.webp">
+                <img class="img" src="media/uptak/uptak mock up.webp" alt="fotografía de dos ordenadores con la página de uptak abierta">
                 <div>
                     <h2 class="title-5">RESUMEN</h2>
                     <h3 class="title-3">El briefing inicial</h3>
@@ -191,11 +191,11 @@
                             necesidad de tocar código.</li>
                     </ul>
                 </div>
-                <img class="img" src="media/uptak/uptak before after.webp">
+                <img class="img" src="media/uptak/uptak before after.webp" alt="comparativa de la web anterior y la actual">
             </section>
 
             <section class="dos-columnas derecha">
-                <video loading="lazy" class="img" src="media/uptak/video_vaso.mp4" autoplay muted playsinline
+                <video loading="lazy" class="img" controls src="media/uptak/video_vaso.mp4" autoplay muted playsinline
                     loop></video>
                 <div>
                     <h2 class="title-5">BENCHMARKING</h2>
@@ -217,7 +217,7 @@
             </section>
 
             <section class="dos-columnas sola">
-                <video loading="lazy" class="img" src="media/uptak/uptak straps.mp4" autoplay muted playsinline
+                <video loading="lazy" class="img" controls src="media/uptak/uptak straps.mp4" autoplay muted playsinline
                 loop></video>
             </section>
 
@@ -246,11 +246,11 @@
                             nueva vista se integrara de forma orgánica con la identidad visual aprobada.</li>
                     </ul>
                 </div>
-                <img class="img" src="media/uptak/Componentes-uptak.webp">
+                <img class="img" src="media/uptak/Componentes-uptak.webp" alt="captura de pantalla de los componentes del sistema de diseño de Uptak">
             </section>
 
             <section class="dos-columnas derecha">
-                <video loading="lazy" class="img" src="media/uptak/video_shopify.mp4" autoplay muted playsinline
+                <video loading="lazy" class="img" controls src="media/uptak/video_shopify.mp4" autoplay muted playsinline
                     loop></video>
                 <div>
                     <h2 class="title-5">DESARROLLO FRONT-END</h2>
@@ -294,21 +294,21 @@
                             que no se pierda ni un ápice de calidad de diseño en el proceso de desarrollo.</li>
                     </ul>
                     <div>
-                        <a class="btn btn-principal" href="https://uptak.com" target="_blank">Visita uptak</a>
-                        <a class="btn btn-secundario" href="https://www.figma.com/design/8eqjbRTlrgXuxuVi8EWa6y/Uptak?node-id=2411-35276&t=TfUd7Y4pWP1M2N9k-1" target="_blank">Ver en Figma</a>
+                        <a class="btn btn-principal" aria-label="Visitar Uptak (se abre en una ventana nueva)" href="https://uptak.com" target="_blank">Visita uptak</a>
+                        <a class="btn btn-secundario" aria-label="Ver proyecto en figma (se abre en una ventana nueva)" href="https://www.figma.com/design/8eqjbRTlrgXuxuVi8EWa6y/Uptak?node-id=2411-35276&t=TfUd7Y4pWP1M2N9k-1" target="_blank">Ver en Figma</a>
                     </div>
                 </div>
             </section>
-            <section class="cta">
+            <section class="cta" loading="lazy">
                 <div>
                     <img class="foto-perfil" src="media/Foto de perfil.webp" alt="Fotografía de Paula Miguel"
                         width="200px" height="200px">
                     <div class="contenido-cta">
-                        <h3 class="title-3">¿Suena bien?<span
-                                style="text-shadow: 1px 0 0 var(--color-fondo), -1px 0 0 var(--color-fondo), 0 1px 0 var(--color-fondo), 0 -1px 0 var(--color-fondo);">
-                                Hablemos</span></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac neque id leo ornare
-                            mollis nec vel diam.</p>
+                        <h3 class="title-3">¿Suena bien?
+                            <span style="text-shadow: 1px 0 0 var(--color-fondo), -1px 0 0 var(--color-fondo), 0 1px 0 var(--color-fondo), 0 -1px 0 var(--color-fondo); color: var(--principal-400) !important;"
+                            > Hablemos</span></h3>
+                        <p>Me encantaría conocerte, si quieres tener una conversación puedes encontrar como en la página de contacto.
+                        </p>
                         <div class="botones-cta">
                             <a href="contacto.html" class="btn btn-secundario"
                                 onclick="cambiarPagina(event, 'contacto.html')">Contacto</a>
@@ -323,7 +323,7 @@
             <div class="contenido-footer">
                 <div class="columna-contacto">
                     <svg id="logotipo-footer" data-name="logotipo" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1075 250">
+                        viewBox="0 0 1075 250" aria-hidden="true">
                         <path class="logotipo"
                             d="m119.02,15.35L23.79,242.98h29.02l23.38-57.44h84.05l22.55,57.44h33.56L120.83,15.35h-1.81Zm-32.49,144.8l32.45-79.7,31.3,79.7h-63.74Z" />
                         <rect class="logotipo" x="241.39" y="9" width="28.42" height="233.98" />
@@ -343,25 +343,27 @@
                         <path class="logotipo"
                             d="m1057.95,215.47c-3.32-3.22-6.8-4.84-10.43-4.84-4.03,0-7.71,1.62-11.03,4.84-3.33,3.23-4.99,7.06-4.99,11.48,0,4.84,1.66,8.72,4.99,11.64,3.32,2.92,7,4.38,11.03,4.38,3.63,0,7.11-1.46,10.43-4.38,3.33-2.92,4.99-6.8,4.99-11.64,0-4.43-1.66-8.26-4.99-11.48Z" />
                     </svg>
+
                     <div class="datos-contacto title-5">
-                        <a href="tel:+34633593246">
+                        <a href="tel:+34633593246" aria-label="Llamar al teléfono +34 633 59 32 46">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_126" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                     width="20" height="20">
                                     <rect width="20" height="20" fill="#D9D9D9" />
                                 </mask>
                                 <g mask="url(#mask0_103_126)">
                                     <path
-                                        d="M15.471 16.5625C13.9561 16.4375 12.4999 16.0377 11.1024 15.3629C9.70509 14.6882 8.43988 13.7831 7.30682 12.6475C6.17391 11.5118 5.27703 10.25 4.6162 8.8621C3.95536 7.47433 3.5555 6.02301 3.41661 4.50815C3.38884 4.21412 3.47418 3.9587 3.67266 3.7419C3.87099 3.52509 4.11898 3.41669 4.41661 3.41669H6.59286C6.84495 3.41669 7.06182 3.49231 7.24349 3.64356C7.42516 3.79467 7.55175 3.99203 7.62328 4.23565L8.05932 5.97919C8.09238 6.16502 8.08196 6.34662 8.02807 6.52398C7.97405 6.70134 7.88613 6.84558 7.76432 6.95669L5.83974 8.83023C6.14946 9.41134 6.49293 9.95835 6.87016 10.4713C7.24724 10.984 7.6605 11.4636 8.10995 11.91C8.5537 12.3536 9.03307 12.7645 9.54807 13.1427C10.0631 13.5209 10.6192 13.865 11.2164 14.1748L13.1906 12.2469C13.3071 12.1251 13.4407 12.0438 13.5914 12.0031C13.742 11.9626 13.9102 11.9562 14.0962 11.984L15.7643 12.3511C16.0164 12.4205 16.2159 12.5487 16.3629 12.7356C16.5098 12.9226 16.5833 13.1448 16.5833 13.4023V15.5625C16.5833 15.8602 16.4714 16.1081 16.2477 16.3065C16.0239 16.505 15.765 16.5903 15.471 16.5625ZM5.35245 7.77252L6.92307 6.26606C6.94974 6.24467 6.9671 6.2153 6.97516 6.17794C6.98321 6.14058 6.98189 6.10585 6.9712 6.07377L6.60557 4.62815C6.59488 4.58551 6.5762 4.55349 6.54953 4.5321C6.52286 4.51071 6.48814 4.50002 6.44536 4.50002H4.64578C4.6137 4.50002 4.58696 4.51071 4.56557 4.5321C4.54432 4.55349 4.5337 4.58023 4.5337 4.61231C4.57634 5.14009 4.66953 5.66648 4.81328 6.19148C4.95689 6.71662 5.13662 7.24363 5.35245 7.77252ZM12.3108 14.6827C12.809 14.9019 13.3299 15.0684 13.8735 15.1821C14.4172 15.2957 14.922 15.3793 15.3877 15.4327C15.4197 15.4327 15.4465 15.422 15.4679 15.4006C15.4893 15.3793 15.4999 15.3525 15.4999 15.3204V13.5256C15.4999 13.4829 15.4893 13.4481 15.4679 13.4215C15.4465 13.3948 15.4145 13.3761 15.3718 13.3654L14.0177 13.0721C13.9856 13.0614 13.9575 13.0601 13.9335 13.0681C13.9095 13.0762 13.884 13.0936 13.8572 13.1202L12.3108 14.6827Z"
+                                        d="M15.471 16.5625C13.9561 16.4375 12.4999 16.0377 11.1024 15.3629C9.70509 14.6882 8.43988 13.7831 7.30682 12.6475C6.17391 11.5118 5.27703 10.25 4.6162 8.8621C3.95536 7.47433 3.5555 6.02301 3.41661 4.50815C3.38884 4.21412 3.47418 3.9587 3.67266 3.7419C3.87099 3.52509 4.11898 3.41669 4.41661 3.41669H6.59286C6.84495 3.41669 7.06182 3.49231 7.24349 3.64356C7.42516 3.79467 7.55175 3.99203 7.62328 4.23565L8.05932 5.97919C8.09238 6.16502 8.08196 6.34662 8.02807 6.52398C7.97405 6.70134 7.88613 6.84558 7.76432 6.95669L5.83974 8.83023C6.14946 9.41134 6.49293 9.95835 6.87016 10.4713C7.24724 10.984 7.6605 11.4636 8.10995 11.91C8.5537 12.3536 9.03307 12.7645 9.54807 13.1427C10.0631 13.5209 10.6192 13.865 11.2164 14.1748L13.1906 12.2469C13.3071 12.1251 13.4407 12.0438 13.5914 12.0031C13.742 11.9626 13.9102 11.9562 14.0962 11.984L15.7643 12.3511C16.0164 12.4205 16.2159 12.5487 16.3629 12.7356C16.5098 12.9226 16.5833 13.1448 16.5833 13.4023V15.5625C16.5833 15.8602 16.4714 16.1081 16.2477 16.3065C16.0239 16.505 15.765 16.5903 15.471 16.5625ZM5.35245 7.77252L6.92307 6.26606C6.94974 6.24467 6.9671 6.2153 6.97516 6.17794C6.98321 6.14058 6.98189 6.10585 6.9712 6.07377L6.60557 4.62815C6.59488 4.58551 6.5762 4.55349 6.54953 4.5321C6.52286 4.51071 6.48814 4.50002 6.44536 4.50002H4.64578C4.6137 4.50002 4.58696 4.51071 4.56557 4.5321C4.54432 4.55349 4.5337 4.58023 4.5337 4.61231C4.57634 5.14009 4.66953 5.66648 4.81328 6.19148C4.95689 6.71662 5.13662 7.24363 5.35245 7.77252ZM12.3108 14.6827C12.809 14.9019 13.3299 15.0684 13.8735 15.1821C14.4172 15.2957 14.922 15.3793 15.3877 15.4327C15.4197 15.4327 15.4465 15.422 15.4679 15.4006C15.4893 15.3793 15.4999 15.3525 15.4999 15.3204V13.5256C15.4999 13.4829 15.4893 13.4481 15.4679 13.4215C15.4465 13.3948 15.4145 13.3761 15.3718 13.3654L14.0177 13.0721C13.9856 13.0614 13.9575 13.0601 13.9335 13.0681C13.9095 13.0762 13.884 13.0936 13.8735 13.1202L12.3108 14.6827Z"
                                         fill="#FDAC0A" />
                                 </g>
                             </svg>
-                            <p class="pulsable">+34 633 59 32 46</p>
+                            <span class="pulsable">+34 633 59 32 46</span>
                         </a>
-                        <a href="mailto:paula@alkemist.es">
+
+                        <a href="mailto:paula@alkemist.es" aria-label="Enviar correo electrónico a paula@alkemist.es">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_127" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                     width="20" height="20">
                                     <rect width="20" height="20" fill="#D9D9D9" />
@@ -372,11 +374,13 @@
                                         fill="#FDAC0A" />
                                 </g>
                             </svg>
-                            <p class="pulsable">paula@alkemist.es</p>
+                            <span class="pulsable">paula@alkemist.es</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/paula-miguel-alkemist/">
+
+                        <a href="https://www.linkedin.com/in/paula-miguel-alkemist/"
+                            aria-label="Visitar perfil de LinkedIn de /paula-miguel-alkemist/">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                     width="20" height="20">
                                     <rect width="20" height="20" fill="#D9D9D9" />
@@ -387,36 +391,52 @@
                                         fill="#FDAC0A" />
                                 </g>
                             </svg>
-                            <p class="pulsable">/paula-miguel-alkemist/</p>
+                            <span class="pulsable">/paula-miguel-alkemist/</span>
                         </a>
                     </div>
                 </div>
+
                 <div class="columna-links title-5">
-                    <div>
-                        <p class="title-4">Porfolio</p>
-                        <a href="uptak.html" class="pulsable" onclick="cambiarPagina(event, 'uptak.html')">Uptak</a>
-                        <a href="campos.html" class="pulsable" onclick="cambiarPagina(event, 'campos.html')">Campos</a>
-                        <a href="caceres-2031.html" class="pulsable"
-                            onclick="cambiarPagina(event, 'caceres-2031.html')">Cáceres 31</a>
-                    </div>
-                    <div>
-                        <p class="title-4">Páginas</p>
-                        <a href="index.html" class="pulsable" onclick="cambiarPagina(event, 'index.html')">Inicio</a>
-                        <a href="sobre-mi.html" class="pulsable" onclick="cambiarPagina(event, 'sobre-mi.html')">Sobre
-                            mí</a>
-                        <a href="trayectoria.html" class="pulsable"
-                            onclick="cambiarPagina(event, 'trayectoria.html')">Trayectoria</a>
-                        <a href="portfolio.html" class="pulsable"
-                            onclick="cambiarPagina(event, 'portfolio.html')">Porfolio</a>
-                    </div>
+                    <nav aria-label="Enlaces de proyectos">
+                        <p class="title-4" id="heading-portfolio">Portfolio</p>
+                        <ul aria-labelledby="heading-portfolio">
+                            <li><a href="uptak.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'uptak.html')">Uptak</a></li>
+                            <li><a href="campos.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'campos.html')">Campos</a></li>
+                            <li><a href="caceres-2031.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'caceres-2031.html')">Cáceres 31</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav aria-label="Enlaces secundarios">
+                        <p class="title-4" id="heading-paginas">Páginas</p>
+                        <ul aria-labelledby="heading-paginas">
+                            <li><a href="index.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'index.html')">Inicio</a></li>
+                            <li><a href="sobre-mi.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'sobre-mi.html')">Sobre mí</a></li>
+                            <li><a href="trayectoria.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'trayectoria.html')">Trayectoria</a></li>
+                            <li><a href="portfolio.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'portfolio.html')">Porfolio</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
+
             <div class="separador"></div>
-            <div class="legal">Copyright © Paula Miguel 2026. Todos los derechos reservados
+
+            <div class="legal">
+                <span>Copyright © Paula Miguel 2026. Todos los derechos reservados</span>
                 <div class="links-legal">
                     <a href="politica-privacidad.html" onclick="cambiarPagina(event, 'politica-privacidad.html')"
-                        class="pulsable">Política de privacidad </a> <span> &#9679; </span> <a href="Aviso-legal.html"
-                        onclick="cambiarPagina(event, 'Aviso-legal.html')" class="pulsable"> Aviso legal</a>
+                        class="pulsable">Política de privacidad</a>
+                    <span aria-hidden="true"> &#9679; </span>
+                    <a href="Aviso-legal.html" onclick="cambiarPagina(event, 'Aviso-legal.html')" class="pulsable">Aviso
+                        legal</a>
+                    <span aria-hidden="true"> &#9679; </span>
+                    <a href="Accesibilidad.html" onclick="cambiarPagina(event, 'Accesibilidad.html')" class="pulsable">Accesibilidad</a>
                 </div>
             </div>
         </footer>
@@ -430,6 +450,7 @@
             --principal-400: #ddfd0a;
             --principal-500: #e4ff3d;
             --principal-700: #adc702;
+            --principal-800: #5b6802;
             --color-fondo: #1a1a1a;
             --color-contraste: #fff;
             --conclusiones: #000;

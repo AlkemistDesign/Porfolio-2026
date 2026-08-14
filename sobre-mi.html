@@ -24,8 +24,8 @@
         </video>
     </div>
 
-    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
     <header>
+        <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
         <a href="index.html" onclick="cambiarPagina(event, 'index.html')" aria-label="Inicio">
             <svg id="logotipo" data-name="logotipo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1075 250"
                 aria-hidden="true" focusable="false">
@@ -100,16 +100,16 @@
         </div>
     </header>
     
-    <div class="hero-sobremi" style="background-color: #000000; background-image: url('media/trayectoria/version3d.webp');">
+    <section class="hero-sobremi" style="background-color: #000000; background-image: url('media/trayectoria/version3d.webp');">
 
-            <p class="title-1">¡Hola! Soy Paula</p>
+            <h1 class="title-1">¡Hola! Soy Paula</h1>
             <p class="texto">Soy diseñadora gráfica especializada en experiencia de usuario y diseño de interfaces (UX/UI).
                 Si estás aquí, probablemente ya hayas visto mi trabajo, pero en esta sección quiero contarte cómo pienso,
                 cómo colaboro y qué herramientas utilizo para dar vida a los productos digitales.<br><br>
                 Si lo que buscas es mi experiencia laboral y académica visita: <a href="trayectoria.html" onclick="cambiarPagina(event, 'trayectoria.html')">Mi trayectoria</a><br><br>
                 Como adelanto:<br><b>Toda esta web ha sido diseñada y desarrollada íntegramente por mí. :)</b></p>
 
-    </div>
+    </section>
     <div class="paper">
         <div class="color-overlay"></div>
         <main id="contenido-principal" class="contenido-pagina">
@@ -126,11 +126,13 @@
                         es la clave para que las ideas fluyan de forma transparente entre negocio, diseño y tecnología.
                     </p>
                 </div>
-                <img class="img" src="media/trayectoria/Diagrama de afiniadad.webp">
+                <img class="img" alt="Diagrama de afinidad hecho con post-it de colores" src="media/trayectoria/Diagrama de afiniadad.webp">
             </section>
 
             <section class="dos-columnas derecha">
-                <video loading="lazy" class="img" src="media/trayectoria/proceso.mp4" autoplay muted playsinline loop></video>
+                <video loading="lazy" class="img" src="media/trayectoria/proceso.mp4" autoplay muted playsinline loop controls>
+                    Video que muestra la evolución de un diseño en 4 fases: boceto inicial, estructura de alambre (wireframe), diseño visual en alta fidelidad y prototipo interactivo final.
+                </video>
                 <div>
                     <h2 class="title-5">MI PROCESO</h2>
                     <h3 class="title-3">Metodología y Herramientas</h3>
@@ -159,11 +161,11 @@
                         los desarrolladores. A veces hasta dejo parte de CSS escrito, para asegurarme de que las cosas van a quedar como quiero.
                     </p>
                 </div>
-                <img class="img" src="media/uptak/Componentes-uptak.webp">
+                <img class="img" alt="Captura de pantalla de la biblioteca de componentes de un diseño en figma" src="media/uptak/Componentes-uptak.webp">
             </section>
 
             <section class="dos-columnas derecha">
-                <img class="img" src="media/trayectoria/accesibilidad.webp">
+                <img class="img" alt="comparativa de contraste de colores para accesibilidad" src="media/trayectoria/accesibilidad.webp">
                 <div>
                     <h2 class="title-5">ACCESIBILIDAD</h2>
                     <h3 class="title-3">Diseño usable y accesible</h3>
@@ -191,7 +193,7 @@
                         una de las partes más gratificantes de mi trabajo.
                     </p>
                 </div>
-                <img class="img" src="media/trayectoria/ESI.webp">
+                <img class="img" alt="fotografía de la recepción de la universidad ESI" src="media/trayectoria/ESI.webp">
             </section>
 
             <section class="cta" loading="lazy">
@@ -271,7 +273,7 @@
                         </a>
 
                         <a href="https://www.linkedin.com/in/paula-miguel-alkemist/"
-                            aria-label="Visitar perfil de LinkedIn de Paula Miguel">
+                            aria-label="Visitar perfil de LinkedIn de /paula-miguel-alkemist/">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -343,6 +345,7 @@
     --principal-400: #FDAC0A; 
     --principal-500: #FD8300; 
     --principal-700: #D56E00;
+    --principal-800: #A35400;
     --color-fondo: #fff;
     --color-contraste:rgb(32, 32, 32)f;
     }

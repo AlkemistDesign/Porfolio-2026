@@ -256,6 +256,14 @@ section.trayectoria{
   background-color: var(--principal-500);
 }
 
+article{
+  text-align: left;
+}
+
+article .title-5{
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 1024px){
 
 /* Portfolio */

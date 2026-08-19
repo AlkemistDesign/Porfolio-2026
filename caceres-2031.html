@@ -16,10 +16,12 @@
 </head>
 
 <body>
-    <div id="transition-overlay" style="background-color: #f0e2e1; opacity: 1; display: flex;"
-        class="transition-overlay" aria-hidden="true">
-        <video id="transition-video" muted playsinline>
-            <source src="media/transicion-papel3.mov" type="video/quicktime">
+    <div id="transition-overlay" style="background-color: #f0e2e1; opacity: 1; display: flex;" class="transition-overlay" aria-hidden="true">
+        <button id="transition-play-btn" class="play-btn" style="display: none;">
+            Reproducir
+        </button>
+        <video id="transition-video" muted playsinline preload="auto">
+            <source src="media/transicion-papel3.mov" type='video/quicktime; codecs="hvc1"'>
             <source src="media/transicion-papel3.webm" type="video/webm">
         </video>
     </div>

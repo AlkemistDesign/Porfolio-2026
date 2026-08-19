@@ -5,14 +5,12 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Campos</title>
+    <link rel="preload" href="media/transicion-papel3.webm" as="video" type="video/webm">
+    <link rel="preload" href="fonts/MontserratAlternates-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/MontserratAlternates-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/porfolio.css">
     <link rel="icon" type="image/png" href="media/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +18,7 @@
         <button id="transition-play-btn" class="play-btn" style="display: none;">
             Reproducir
         </button>
-        <video id="transition-video" muted playsinline preload="auto">
+        <video id="transition-video" autoplay muted playsinline preload="auto">
             <source src="media/transicion-papel3.mov" type='video/quicktime; codecs="hvc1"'>
             <source src="media/transicion-papel3.webm" type="video/webm">
         </video>
@@ -142,7 +140,7 @@
         <div class="color-overlay"></div>
         <main id="contenido-principal" class="contenido-pagina">
             <section class="dos-columnas derecha">
-                <img class="img" src="media/campos/Campos Mockup.webp" alt="portátil encima de un arbol seco con la web de Campos abierta">
+                <img class="img" loading="lazy" src="media/campos/Campos Mockup.webp" alt="portátil encima de un arbol seco con la web de Campos abierta">
                 <div>
                     <h2 class="title-5">RESUMEN</h2>
                     <h3 class="title-3">Project overview</h3>
@@ -190,11 +188,11 @@
                         </li>
                     </ul>
                 </div>
-                <img class="img" src="media/campos/moodboard campos.webp" alt="tabla de corte para manualidades con fotografías de campos">
+                <img class="img" loading="lazy" src="media/campos/moodboard campos.webp" alt="tabla de corte para manualidades con fotografías de campos">
             </section>
 
             <section class="dos-columnas derecha">
-                <img class="img" src="media/campos/reticula campos.webp" alt="captura de pantalla del footer de la web de campos con líneas blancas">
+                <img class="img" loading="lazy" src="media/campos/reticula campos.webp" alt="captura de pantalla del footer de la web de campos con líneas blancas">
                 <div>
                     <h2 class="title-5">BENCHMARKING</h2>
                     <h3 class="title-3">Investigación y Enfoque creativo</h3>
@@ -243,9 +241,9 @@
                     </div>
                 </div>
             </section>
-            <section class="cta" loading="lazy">
+            <section class="cta">
                 <div>
-                    <img class="foto-perfil" src="media/Foto de perfil.webp" alt="Fotografía de Paula Miguel"
+                    <img class="foto-perfil" loading="lazy" src="media/Foto de perfil.webp" alt="Fotografía de Paula Miguel"
                         width="200px" height="200px">
                     <div class="contenido-cta">
                         <h3 class="title-3">¿Suena bien?<span> Hablemos</span></h3>

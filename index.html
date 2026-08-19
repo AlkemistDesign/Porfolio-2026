@@ -5,14 +5,12 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Alkemist UX/UI</title>
+    <link rel="preload" href="media/transicion-papel3.webm" as="video" type="video/webm">
+    <link rel="preload" href="fonts/MontserratAlternates-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/MontserratAlternates-Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/png" href="media/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -20,7 +18,7 @@
         <button id="transition-play-btn" class="play-btn" style="display: none;">
             Reproducir
         </button>
-        <video id="transition-video" muted playsinline preload="auto">
+        <video id="transition-video" autoplay muted playsinline preload="auto">
             <source src="media/transicion-papel3.mov" type='video/quicktime; codecs="hvc1"'>
             <source src="media/transicion-papel3.webm" type="video/webm">
         </video>
@@ -242,28 +240,28 @@
                 </div>
                 <div class="tarjetas-trayectoria">
                     <div class="tarjeta-trayect">
-                        <div style="background-image: url(media/trayectoria/ESI.webp);" loading="lazy">
+                        <div style="background-image: url(media/trayectoria/ESI.webp);">
                             <div class="label">2025</div>
                         </div>
                         <p>Volví a la misma universidad donde había terminado mis estudios, para dar clase de su nueva
                             asignatura de diseño UX/UI...</p>
                     </div>
                     <div class="tarjeta-trayect">
-                        <div style="background-image: url(media/trayectoria/foto\ baianai.webp);" loading="lazy">
+                        <div style="background-image: url(media/trayectoria/foto\ baianai.webp);">
                             <div class="label">2024</div>
                         </div>
                         <p>Comencé a trabajar en BAIANAI SL como diseñadora UX/UI a tiempo completo. Tras haber
                             realizado unas prácticas extracurriculares...</p>
                     </div>
                     <div class="tarjeta-trayect">
-                        <div style="background-image: url(media/trayectoria/graduacion.webp);" loading="lazy">
+                        <div style="background-image: url(media/trayectoria/graduacion.webp);">
                             <div class="label">2024</div>
                         </div>
                         <p>Finalizé la carrera universitaria de diseño gráfico en ESI Valladolid. Mi proyecto de TFG,
                             Nikki, fue puntuado con la nota máxima...</p>
                     </div>
                     <div class="tarjeta-trayect">
-                        <div style="background-image: url(media/trayectoria/ajedrez.webp);" loading="lazy">
+                        <div style="background-image: url(media/trayectoria/ajedrez.webp);">
                             <div class="label">2008</div>
                         </div>
                         <p>Mi madre hizo un curso de HTML y CSS. Cuando me aburría cogía los manuales para luego
@@ -292,10 +290,10 @@
                     <div class="circulo circulo-4"></div>
                 </div>
             </section>
-            <section class="cta" loading="lazy">
+            <section class="cta">
                 <div>
                     <img class="foto-perfil" src="media/Foto de perfil.webp" alt="Fotografía de Paula Miguel"
-                        width="200px" height="200px">
+                        width="200px" height="200px" loading="lazy">
                     <div class="contenido-cta">
                         <h3 class="title-3">¿Suena bien?<span> Hablemos</span></h3>
                         <p>Me encantaría conocerte, si quieres tener una conversación puedes encontrar como en la página de contacto.

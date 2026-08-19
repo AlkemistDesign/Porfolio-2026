@@ -1,3 +1,34 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-alternates-v18-latin_latin-ext-regular.woff2') format('woff2');
+}
+/* montserrat-alternates-500 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/montserrat-alternates-v18-latin_latin-ext-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/montserrat-alternates-v18-latin_latin-ext-600.woff2') format('woff2');
+}
+/* montserrat-alternates-700 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-alternates-v18-latin_latin-ext-700.woff2') format('woff2');
+}
 
 /* ----------------------------------- Fondo papel procedural ----------------------------------- */
 
@@ -253,7 +284,7 @@ body {
   padding: 12px 24px;
   border-radius: 0 0 8px 8px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   z-index: 9999; 
   transition: top 0.2s ease;
 }
@@ -944,7 +975,7 @@ footer .contenido-footer, .columna-links {
     display: block;
     margin-bottom: 12px;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 700;
     color: CanvasText; 
   }
 

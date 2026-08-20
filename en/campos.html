@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Campos</title>
+    <meta name="description" content="Campos Project: User experience optimization through Motion UX and advanced microinteractions that elevate the perceived value of the digital product.">
+    <link rel="preload" href="../media/transicion-papel3.webm" as="video" type="video/webm">
+    <link rel="preload" href="../fonts/MontserratAlternates-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/MontserratAlternates-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/porfolio.css">
+    <link rel="icon" type="image/png" href="../media/favicon.png">
+</head>
+
+<body>
+    <div id="transition-overlay" style="background-color: #f0e2e1; opacity: 1; display: flex;" class="transition-overlay" aria-hidden="true">
+        <button id="transition-play-btn" class="play-btn" style="display: none;">
+            Play
+        </button>
+        <video id="transition-video" autoplay muted playsinline preload="auto">
+            <source src="../media/transicion-papel3.mov" type='video/quicktime; codecs="hvc1"'>
+            <source src="../media/transicion-papel3.webm" type="video/webm">
+        </video>
+    </div>
+
+    
+    <header><a href="#contenido-principal" class="skip-link">Skip to main content</a>
+        <a href="index.html" onclick="cambiarPagina(event, 'index.html')" aria-label="Home">
+            <svg id="logotipo" data-name="logotipo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1075 250"
+                aria-hidden="true" focusable="false">
+                <path class="logotipo"
+                    d="m119.02,15.35L23.79,242.98h29.02l23.38-57.44h84.05l22.55,57.44h33.56L120.83,15.35h-1.81Zm-32.49,144.8l32.45-79.7,31.3,79.7h-63.74Z" />
+                <rect class="logotipo" x="241.39" y="9" width="28.42" height="233.98" />
+                <polygon class="logotipo"
+                    points="405.97 129.92 388.74 115.11 324.35 166.67 324.35 9 295.92 9 295.92 242.98 324.35 242.98 324.35 195.98 340.41 182.98 379.06 242.98 412.01 242.98 359.92 167.19 405.97 129.92" />
+                <path class="logotipo"
+                    d="m526.99,127.2c-10.88-9.67-24.59-14.51-41.12-14.51-12.9,0-24.58,3.03-35.06,9.07-10.48,6.05-18.89,14.11-25.24,24.18-6.35,10.08-9.52,21.27-9.52,33.56,0,12.9,2.82,24.33,8.46,34.31,5.64,9.98,13.6,17.84,23.88,23.58,10.28,5.74,22.57,8.61,36.89,8.61,7.45,0,15.06-1.31,22.82-3.93,7.76-2.62,14.76-6.05,21.01-10.28l-12.69-20.86c-4.64,3.23-9.53,5.85-14.66,7.86-5.14,2.02-10.43,3.02-15.88,3.02-8.06,0-15.26-1.86-21.61-5.59-5.94-3.48-10.59-8.3-14.06-14.33l99.15-34.79c-4.03-16.93-11.49-30.23-22.37-39.9Zm-77.69,28.57c3.42-6.35,8.11-11.33,14.06-14.96,5.95-3.63,12.74-5.44,20.4-5.44,9.07,0,16.43,2.42,22.07,7.25,5.11,4.38,8.83,9.55,11.3,15.42l-72.52,26.77c-.27-2.21-.44-4.47-.44-6.82,0-8.46,1.71-15.87,5.14-22.22Z" />
+                <path class="logotipo"
+                    d="m727,112.69c-9.48,0-18.49,2.57-27.06,7.71-7.9,4.74-14.12,11.31-18.85,19.55-1.08-5.45-3.21-10.2-6.54-14.11-3.53-4.12-8.01-7.35-13.46-9.67-5.44-2.31-11.59-3.48-18.43-3.48-11.29,0-21.21,2.77-29.78,8.32-7.93,5.14-14.1,12.03-18.67,20.54l-2.04-23.71h-25.69v125.15h28.41v-58.95c0-8.26,1.62-15.92,4.84-22.97,3.22-7.05,7.66-12.74,13.3-17.08,5.64-4.33,12.09-6.5,19.34-6.5,7.26.2,12.44,2.47,15.57,6.8,3.12,4.33,4.78,9.73,4.99,16.17v82.53h28.41v-59.25c.2-8.26,1.86-15.87,4.99-22.82,3.12-6.95,7.56-12.59,13.3-16.93,5.75-4.33,12.24-6.5,19.5-6.5,7.26.2,12.34,2.47,15.27,6.8,2.92,4.33,4.48,9.73,4.68,16.17v82.53h28.41v-92.8c-.4-10.89-4.18-19.85-11.33-26.91-7.16-7.05-16.88-10.58-29.17-10.58Z" />
+                <rect class="logotipo" x="789.4" y="117.83" width="28.42" height="125.15" />
+                <path class="logotipo"
+                    d="m804.52,56.76c-4.24,0-8.12,1.51-11.64,4.53-3.53,3.03-5.29,6.76-5.29,11.19s1.76,8.42,5.29,11.34c3.53,2.92,7.4,4.38,11.64,4.38s8.05-1.46,11.48-4.38c3.43-2.92,5.14-6.7,5.14-11.34s-1.71-8.16-5.14-11.19c-3.43-3.02-7.25-4.53-11.48-4.53Z" />
+                <path class="logotipo"
+                    d="m916.86,176.17c-4.84-3.02-10.28-5.44-16.33-7.25-4.64-1.61-9.17-3.22-13.6-4.84-4.44-1.61-8.11-3.67-11.03-6.2-2.93-2.52-4.29-5.9-4.08-10.13,0-3.22.95-5.9,2.87-8.01,1.92-2.12,4.44-3.73,7.56-4.84,3.12-1.1,6.49-1.66,10.13-1.66,4.03,0,8.51.96,13.45,2.87,4.94,1.92,9.23,4.79,12.85,8.61l11.19-17.53c-6.04-5.04-12.5-8.61-19.34-10.73-6.86-2.12-14.62-3.17-23.28-3.17-9.47,0-17.53,1.87-24.18,5.59-6.65,3.73-11.64,8.46-14.97,14.21-3.32,5.74-4.99,11.94-4.99,18.59,0,8.67,2.72,16.02,8.16,22.07,5.45,6.05,13.3,10.78,23.58,14.21,5.23,1.41,10.07,2.92,14.51,4.53,4.43,1.62,8.11,3.68,11.04,6.2,2.92,2.52,4.38,6.1,4.38,10.73,0,3.83-1.06,6.95-3.17,9.37-2.12,2.42-4.89,4.13-8.32,5.14-3.43,1.01-7.15,1.51-11.19,1.51-5.44,0-10.88-1.26-16.32-3.78-5.45-2.52-10.88-6.29-16.33-11.34l-11.79,16.33c5.45,6.25,12.34,10.94,20.71,14.06,8.36,3.12,16.97,4.69,25.84,4.69,11.09,0,20.21-1.87,27.36-5.59,7.15-3.73,12.49-8.77,16.02-15.12,3.53-6.35,5.3-13.25,5.3-20.71,0-6.65-1.47-12.19-4.39-16.63-2.93-4.43-6.8-8.16-11.64-11.19Z" />
+                <polygon class="logotipo"
+                    points="997 62.81 968.28 62.81 968.28 118.43 945.61 118.43 945.61 140.5 968.28 140.5 968.28 242.98 997 242.98 997 140.5 1031.16 140.5 1031.16 118.43 997 118.43 997 62.81" />
+                <path class="logotipo"
+                    d="m1057.95,215.47c-3.32-3.22-6.8-4.84-10.43-4.84-4.03,0-7.71,1.62-11.03,4.84-3.33,3.23-4.99,7.06-4.99,11.48,0,4.84,1.66,8.72,4.99,11.64,3.32,2.92,7,4.38,11.03,4.38,3.63,0,7.11-1.46,10.43-4.38,3.33-2.92,4.99-6.8,4.99-11.64,0-4.43-1.66-8.26-4.99-11.48Z" />
+            </svg>
+        </a>
+
+        <nav class="desktop title-5" aria-label="Main navigation">
+            <ul>
+                <li><a href="about-me.html" class="pulsable" onclick="cambiarPagina(event, 'about-me.html')">About
+                        me</a></li>
+                <li><a href="career.html" class="pulsable"
+                        onclick="cambiarPagina(event, 'career.html')">Career</a></li>
+
+                <li class="portfolio-dropdown">
+                    <a href="index.html" class="pulsable" id="portfolio-submenu-btn"
+                        onclick="cambiarPagina(event, 'index.html')">Portfolio</a>
+                    <nav class="menu-desplegable sub-desktop" aria-label="Portfolio Submenu">
+                        <ul>
+                            <li><a href="uptak.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'uptak.html')">Uptak</a></li>
+                            <li><a href="campos.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'campos.html')">Campos</a></li>
+                            <li><a href="caceres-2031.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'caceres-2031.html')">Cáceres 2031</a></li>
+                        </ul>
+                    </nav>
+                </li>
+
+                <li><a href="contact.html" class="btn btn-principal"
+                        onclick="cambiarPagina(event, 'contact.html')">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="mobile-menu">
+            <button type="button" class="btn-hamburguesa" aria-label="Open navigation menu" aria-expanded="false"
+                aria-controls="menu-movil-lista">
+                <span class="l-1" aria-hidden="true"></span>
+                <span class="l-2" aria-hidden="true"></span>
+                <span class="l-3" aria-hidden="true"></span>
+            </button>
+
+            <nav class="menu-desplegable title-5" id="menu-movil-lista" aria-label="Mobile navigation">
+                <ul>
+                    <li><a href="about-me.html" class="pulsable" onclick="cambiarPagina(event, 'about-me.html')">About
+                            me</a></li>
+                    <li><a href="career.html" class="pulsable" onclick="cambiarPagina(event, 'career.html')">Career</a>
+                    </li>
+                    <li><a href="index.html" class="pulsable" onclick="cambiarPagina(event, 'index.html')">Portfolio</a>
+                    </li>
+                    <li><a href="contact.html" class="pulsable"
+                            onclick="cambiarPagina(event, 'contact.html')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-porfolio" style="background-image: url(../media/campos/CAMPOS_logo.webp);background-color: #158045;">
+        <div class="ventana">
+            <div class="interfaz-ventana">
+                <h1 class="texto">Campos.jpg </h1>
+                <div class="iconos-interfaz">
+                    <div class="icon-min"></div>
+                    <div class="icon-max"></div>
+                    <div class="icon-cerrar"></div>
+                </div>
+            </div>
+            <div class="contenido-ventana">
+                <div>
+                    <p class="title-5">UX/UI & FRONT-END CASE STUDY</p>
+                    <p>Immersive Web Design for the promotion of a football documentary in 'Empty Spain'</p>
+                </div>
+                <div class="interior-ventana">
+                    <div>
+                        <p class="title-5">ROLE</p>
+                        <p>Product Designer & Front-End (UX/UI, Interaction, and Animation)</p>
+                    </div>
+                    <div>
+                        <p class="title-5">TECH STACK</p>
+                        <p>Figma<br>Elementor<br>Responsive<br>Motion UX<br>CSS</p>
+                    </div>
+                    <div>
+                        <p class="title-5">AGENCY</p>
+                        <p>BAIANAI</p>
+                    </div>
+                    <div>
+                        <p class="title-5">PLATFORM</p>
+                        <p>Narrative Landing Page</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="paper">
+        <div class="color-overlay"></div>
+        <main id="contenido-principal" class="contenido-pagina">
+            <section class="dos-columnas derecha">
+                <img class="img" loading="lazy" src="../media/campos/Campos Mockup.webp" alt="Laptop on a dry tree with the Campos website open">
+                <div>
+                    <h2 class="title-5">SUMMARY</h2>
+                    <h3 class="title-3">Project overview</h3>
+                    <p class="texto">
+                        Campos is a documentary film project that tells stories of resistance, community, and identity through football in the depopulated regions of 'Empty Spain'. The main objective was to create a highly visual promotional web platform that not only informed about the project but also transferred the atmosphere and emotional weight of the documentary to the digital environment. The final design became the main commercial pitch tool, serving as a key showcase to attract the interest of major distributors.
+                    </p>
+                </div>
+            </section>
+
+            <section class="dos-columnas">
+                <div>
+                    <h2 class="title-5">APPROACH</h2>
+                    <h3 class="title-3">The Problem and Objectives</h3>
+                    <p class="texto">
+                        The traditional format of informative websites is usually flat and static, which directly clashed with the cinematic and artistic nature of a documentary. The UX/UI challenge was to translate the audiovisual narrative into an interactive web experience that retained the user, generated immediate emotional impact, and conveyed professionalism to potential investors.
+                    </p>
+                    <ul class="texto">
+                        <li><b>Visual Impact and Differentiation:</b> Create a disruptive interface that captures the attention of critics and distributors within the first seconds of navigation.</li>
+                        <li><b>Extreme Adaptability (Responsive):</b> Ensure that complex visual compositions and animations run smoothly on both mobile devices and high-resolution screens.</li>
+                        <li><b>Business Conversion:</b> Subtly guide the user towards watching the trailer and contacting the production company directly.</li>
+                        <li><b>The Human Factor:</b> Being originally from a small town in Palencia, I was able to bring a unique insider perspective to the research phase. I understood the roots, nostalgia, and poetics of rural spaces. This guided design decisions from maximum authenticity, ensuring the interface felt respectful of the reality the documentary portrays.
+                        </li>
+                    </ul>
+                </div>
+                <img class="img" loading="lazy" src="../media/campos/moodboard campos.webp" alt="Craft cutting mat with photographs of fields">
+            </section>
+
+            <section class="dos-columnas derecha">
+                <img class="img" loading="lazy" src="../media/campos/reticula campos.webp" alt="Screenshot of the footer of the Campos website with white lines">
+                <div>
+                    <h2 class="title-5">BENCHMARKING</h2>
+                    <h3 class="title-3">Research and Creative Approach</h3>
+                    <p class="texto">
+                        The benchmarking process analyzed platforms and landing pages for independent cinema.
+                        We identified that the most successful websites used white space and large-scale typography to generate dramatic tension.
+                        The art direction was directly inspired by the geometry of the sport: the chalk lines that delimit a football field. I used lines that segment the screen and structure the different sections. Through scroll and hover, these lines dynamically grow, cross, and transform, guiding the user's eye through the story.
+                    </p>
+                </div>
+            </section>
+
+            <section class="dos-columnas">
+                <div>
+                    <h2 class="title-5">Development</h2>
+                    <h3 class="title-3">Front-End: Animation and development</h3>
+                    <p class="texto">
+                        Designing a website with living lines and animations that mutate according to the device required strict control of technical feasibility. My knowledge of Front-End allowed me to plan the structural behavior under the logic of CSS Grid and Flexbox from Figma.<br>
+                        In addition to designing for static breakpoints, I proposed a "liquid" behavior, calculating proportionally scalable containers. Thus, part of the development was carried out alongside the design to ensure the viability of the elements.
+                    </p>
+                </div>
+                <video loading="lazy" controls class="img" src="../media/campos/animacion campos.mp4" autoplay muted playsinline
+                loop></video>
+            </section>
+
+            <section class="dos-columnas conclusiones" style="background-image: url(../media/campos/campos\ en\ cyl\ television.webp);">
+                <div>
+                    <h2 class="title-5">CONCLUSIONS</h2>
+                    <h3 class="title-3">Results and learning</h3>
+                    <p class="texto">
+                        The web platform exceeded the commercial expectations of the production team. It functioned as the definitive interactive digital dossier in key industry meetings, contributing directly to closing a distribution agreement with Castilla y León television.
+                    </p>
+                    <div>
+                        <a class="btn btn-principal" aria-label="Visit Campos (opens in a new window)" href="https://camposdoc.com/" target="_blank">Visit Campos</a>
+                    </div>
+                </div>
+            </section>
+            <section class="cta">
+                <div>
+                    <img class="foto-perfil" loading="lazy" src="../media/Foto de perfil.webp" alt="Photograph of Paula Miguel"
+                        width="200px" height="200px">
+                    <div class="contenido-cta">
+                        <h3 class="title-3">Sounds good?<span> Let's talk</span></h3>
+                        <p>I would love to meet you. If you'd like to have a chat, you can find how on the contact page.
+                        </p>
+                        <div class="botones-cta">
+                            <a href="contact.html" class="btn btn-secundario"
+                                onclick="cambiarPagina(event, 'contact.html')">Contact</a>
+                            <a href="about-me.html" class="btn btn-principal"
+                                onclick="cambiarPagina(event, 'about-me.html')">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="contenido-footer">
+                <div class="columna-contacto">
+                    <svg id="logotipo-footer" data-name="logotipo" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 1075 250" aria-hidden="true">
+                        <path class="logotipo"
+                            d="m119.02,15.35L23.79,242.98h29.02l23.38-57.44h84.05l22.55,57.44h33.56L120.83,15.35h-1.81Zm-32.49,144.8l32.45-79.7,31.3,79.7h-63.74Z" />
+                        <rect class="logotipo" x="241.39" y="9" width="28.42" height="233.98" />
+                        <polygon class="logotipo"
+                            points="405.97 129.92 388.74 115.11 324.35 166.67 324.35 9 295.92 9 295.92 242.98 324.35 242.98 324.35 195.98 340.41 182.98 379.06 242.98 412.01 242.98 359.92 167.19 405.97 129.92" />
+                        <path class="logotipo"
+                            d="m526.99,127.2c-10.88-9.67-24.59-14.51-41.12-14.51-12.9,0-24.58,3.03-35.06,9.07-10.48,6.05-18.89,14.11-25.24,24.18-6.35,10.08-9.52,21.27-9.52,33.56,0,12.9,2.82,24.33,8.46,34.31,5.64,9.98,13.6,17.84,23.88,23.58,10.28,5.74,22.57,8.61,36.89,8.61,7.45,0,15.06-1.31,22.82-3.93,7.76-2.62,14.76-6.05,21.01-10.28l-12.69-20.86c-4.64,3.23-9.53,5.85-14.66,7.86-5.14,2.02-10.43,3.02-15.88,3.02-8.06,0-15.26-1.86-21.61-5.59-5.94-3.48-10.59-8.3-14.06-14.33l99.15-34.79c-4.03-16.93-11.49-30.23-22.37-39.9Zm-77.69,28.57c3.42-6.35,8.11-11.33,14.06-14.96,5.95-3.63,12.74-5.44,20.4-5.44,9.07,0,16.43,2.42,22.07,7.25,5.11,4.38,8.83,9.55,11.3,15.42l-72.52,26.77c-.27-2.21-.44-4.47-.44-6.82,0-8.46,1.71-15.87,5.14-22.22Z" />
+                        <path class="logotipo"
+                            d="m727,112.69c-9.48,0-18.49,2.57-27.06,7.71-7.9,4.74-14.12,11.31-18.85,19.55-1.08-5.45-3.21-10.2-6.54-14.11-3.53-4.12-8.01-7.35-13.46-9.67-5.44-2.31-11.59-3.48-18.43-3.48-11.29,0-21.21,2.77-29.78,8.32-7.93,5.14-14.1,12.03-18.67,20.54l-2.04-23.71h-25.69v125.15h28.41v-58.95c0-8.26,1.62-15.92,4.84-22.97,3.22-7.05,7.66-12.74,13.3-17.08,5.64-4.33,12.09-6.5,19.34-6.5,7.26.2,12.44,2.47,15.57,6.8,3.12,4.33,4.78,9.73,4.99,16.17v82.53h28.41v-59.25c.2-8.26,1.86-15.87,4.99-22.82,3.12-6.95,7.56-12.59,13.3-16.93,5.75-4.33,12.24-6.5,19.5-6.5,7.26.2,12.34,2.47,15.27,6.8,2.92,4.33,4.48,9.73,4.68,16.17v82.53h28.41v-92.8c-.4-10.89-4.18-19.85-11.33-26.91-7.16-7.05-16.88-10.58-29.17-10.58Z" />
+                        <rect class="logotipo" x="789.4" y="117.83" width="28.42" height="125.15" />
+                        <path class="logotipo"
+                            d="m804.52,56.76c-4.24,0-8.12,1.51-11.64,4.53-3.53,3.03-5.29,6.76-5.29,11.19s1.76,8.42,5.29,11.34c3.53,2.92,7.4,4.38,11.64,4.38s8.05-1.46,11.48-4.38c3.43-2.92,5.14-6.7,5.14-11.34s-1.71-8.16-5.14-11.19c-3.43-3.02-7.25-4.53-11.48-4.53Z" />
+                        <path class="logotipo"
+                            d="m916.86,176.17c-4.84-3.02-10.28-5.44-16.33-7.25-4.64-1.61-9.17-3.22-13.6-4.84-4.44-1.61-8.11-3.67-11.03-6.2-2.93-2.52-4.29-5.9-4.08-10.13,0-3.22.95-5.9,2.87-8.01,1.92-2.12,4.44-3.73,7.56-4.84,3.12-1.1,6.49-1.66,10.13-1.66,4.03,0,8.51.96,13.45,2.87,4.94,1.92,9.23,4.79,12.85,8.61l11.19-17.53c-6.04-5.04-12.5-8.61-19.34-10.73-6.86-2.12-14.62-3.17-23.28-3.17-9.47,0-17.53,1.87-24.18,5.59-6.65,3.73-11.64,8.46-14.97,14.21-3.32,5.74-4.99,11.94-4.99,18.59,0,8.67,2.72,16.02,8.16,22.07,5.45,6.05,13.3,10.78,23.58,14.21,5.23,1.41,10.07,2.92,14.51,4.53,4.43,1.62,8.11,3.68,11.04,6.2,2.92,2.52,4.38,6.1,4.38,10.73,0,3.83-1.06,6.95-3.17,9.37-2.12,2.42-4.89,4.13-8.32,5.14-3.43,1.01-7.15,1.51-11.19,1.51-5.44,0-10.88-1.26-16.32-3.78-5.45-2.52-10.88-6.29-16.33-11.34l-11.79,16.33c5.45,6.25,12.34,10.94,20.71,14.06,8.36,3.12,16.97,4.69,25.84,4.69,11.09,0,20.21-1.87,27.36-5.59,7.15-3.73,12.49-8.77,16.02-15.12,3.53-6.35,5.3-13.25,5.3-20.71,0-6.65-1.47-12.19-4.39-16.63-2.93-4.43-6.8-8.16-11.64-11.19Z" />
+                        <polygon class="logotipo"
+                            points="997 62.81 968.28 62.81 968.28 118.43 945.61 118.43 945.61 140.5 968.28 140.5 968.28 242.98 997 242.98 997 140.5 1031.16 140.5 1031.16 118.43 997 118.43 997 62.81" />
+                        <path class="logotipo"
+                            d="m1057.95,215.47c-3.32-3.22-6.8-4.84-10.43-4.84-4.03,0-7.71,1.62-11.03,4.84-3.33,3.23-4.99,7.06-4.99,11.48,0,4.84,1.66,8.72,4.99,11.64,3.32,2.92,7,4.38,11.03,4.38,3.63,0,7.11-1.46,10.43-4.38,3.33-2.92,4.99-6.8,4.99-11.64,0-4.43-1.66-8.26-4.99-11.48Z" />
+                    </svg>
+
+                    <div class="datos-contacto title-5">
+                        <a href="tel:+34633593246" aria-label="Call phone number +34 633 59 32 46">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <mask id="mask0_103_126" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="20" height="20">
+                                    <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_103_126)">
+                                    <path
+                                        d="M15.471 16.5625C13.9561 16.4375 12.4999 16.0377 11.1024 15.3629C9.70509 14.6882 8.43988 13.7831 7.30682 12.6475C6.17391 11.5118 5.27703 10.25 4.6162 8.8621C3.95536 7.47433 3.5555 6.02301 3.41661 4.50815C3.38884 4.21412 3.47418 3.9587 3.67266 3.7419C3.87099 3.52509 4.11898 3.41669 4.41661 3.41669H6.59286C6.84495 3.41669 7.06182 3.49231 7.24349 3.64356C7.42516 3.79467 7.55175 3.99203 7.62328 4.23565L8.05932 5.97919C8.09238 6.16502 8.08196 6.34662 8.02807 6.52398C7.97405 6.70134 7.88613 6.84558 7.76432 6.95669L5.83974 8.83023C6.14946 9.41134 6.49293 9.95835 6.87016 10.4713C7.24724 10.984 7.6605 11.4636 8.10995 11.91C8.5537 12.3536 9.03307 12.7645 9.54807 13.1427C10.0631 13.5209 10.6192 13.865 11.2164 14.1748L13.1906 12.2469C13.3071 12.1251 13.4407 12.0438 13.5914 12.0031C13.742 11.9626 13.9102 11.9562 14.0962 11.984L15.7643 12.3511C16.0164 12.4205 16.2159 12.5487 16.3629 12.7356C16.5098 12.9226 16.5833 13.1448 16.5833 13.4023V15.5625C16.5833 15.8602 16.4714 16.1081 16.2477 16.3065C16.0239 16.505 15.765 16.5903 15.471 16.5625ZM5.35245 7.77252L6.92307 6.26606C6.94974 6.24467 6.9671 6.2153 6.97516 6.17794C6.98321 6.14058 6.98189 6.10585 6.9712 6.07377L6.60557 4.62815C6.59488 4.58551 6.5762 4.55349 6.54953 4.5321C6.52286 4.51071 6.48814 4.50002 6.44536 4.50002H4.64578C4.6137 4.50002 4.58696 4.51071 4.56557 4.5321C4.54432 4.55349 4.5337 4.58023 4.5337 4.61231C4.57634 5.14009 4.66953 5.66648 4.81328 6.19148C4.95689 6.71662 5.13662 7.24363 5.35245 7.77252ZM12.3108 14.6827C12.809 14.9019 13.3299 15.0684 13.8735 15.1821C14.4172 15.2957 14.922 15.3793 15.3877 15.4327C15.4197 15.4327 15.4465 15.422 15.4679 15.4006C15.4893 15.3793 15.4999 15.3525 15.4999 15.3204V13.5256C15.4999 13.4829 15.4893 13.4481 15.4679 13.4215C15.4465 13.3948 15.4145 13.3761 15.3718 13.3654L14.0177 13.0721C13.9856 13.0614 13.9575 13.0601 13.9335 13.0681C13.9095 13.0762 13.884 13.0936 13.8735 13.1202L12.3108 14.6827Z"
+                                        fill="#FDAC0A" />
+                                </g>
+                            </svg>
+                            <span class="pulsable">+34 633 59 32 46</span>
+                        </a>
+
+                        <a href="mailto:paula@alkemist.es" aria-label="Send an email to paula@alkemist.es">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <mask id="mask0_103_127" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="20" height="20">
+                                    <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_103_127)">
+                                    <path
+                                        d="M3.75642 15.5834C3.38128 15.5834 3.0642 15.4538 2.80517 15.1946C2.54614 14.9354 2.41663 14.6181 2.41663 14.2427V5.75065C2.41663 5.37523 2.54614 5.05905 2.80517 4.8021C3.0642 4.54516 3.38128 4.41669 3.75642 4.41669H16.2435C16.6186 4.41669 16.9357 4.54627 17.1948 4.80544C17.4538 5.0646 17.5833 5.38189 17.5833 5.75731V14.2494C17.5833 14.6248 17.4538 14.941 17.1948 15.1979C16.9357 15.4549 16.6186 15.5834 16.2435 15.5834H3.75642ZM9.99996 10.6315L3.49996 6.80606V14.2436C3.49996 14.3184 3.52399 14.3799 3.57204 14.4279C3.6201 14.476 3.68156 14.5 3.75642 14.5H16.2435C16.3184 14.5 16.3798 14.476 16.4279 14.4279C16.4759 14.3799 16.5 14.3184 16.5 14.2436V6.80606L9.99996 10.6315ZM9.99996 9.22919L16.3718 5.50002H3.62808L9.99996 9.22919ZM3.49996 6.80606V5.50002V14.2436C3.49996 14.3184 3.52399 14.3799 3.57204 14.4279C3.6201 14.476 3.68156 14.5 3.75642 14.5H3.49996V6.80606Z"
+                                        fill="#FDAC0A" />
+                                </g>
+                            </svg>
+                            <span class="pulsable">paula@alkemist.es</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/paula-miguel-alkemist/"
+                            aria-label="Visit LinkedIn profile of /paula-miguel-alkemist/">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <mask id="mask0_103_128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="20" height="20">
+                                    <rect width="20" height="20" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_103_128)">
+                                    <path
+                                        d="M9.82857 8.14857C10.4574 7.50606 11.2761 7.08571 12.2286 7.08571C13.2288 7.08571 14.1881 7.48306 14.8954 8.19034C15.6027 8.89762 16 9.8569 16 10.8571V16H14.6286V10.8571C14.6286 10.2206 14.3757 9.61017 13.9256 9.16009C13.4755 8.71 12.8651 8.45714 12.2286 8.45714C11.5921 8.45714 10.9816 8.71 10.5315 9.16009C10.0814 9.61017 9.82857 10.2206 9.82857 10.8571V16H8.45714V7.42857H9.82857V8.14857ZM5.02857 6.05714C4.75578 6.05714 4.49416 5.94878 4.30126 5.75588C4.10837 5.56299 4 5.30137 4 5.02857C4 4.75578 4.10837 4.49416 4.30126 4.30126C4.49416 4.10837 4.75578 4 5.02857 4C5.30137 4 5.56299 4.10837 5.75588 4.30126C5.94878 4.49416 6.05714 4.75578 6.05714 5.02857C6.05714 5.30137 5.94878 5.56299 5.75588 5.75588C5.56299 5.94878 5.30137 6.05714 5.02857 6.05714ZM4.34286 7.42857H5.71429V16H4.34286V7.42857Z"
+                                        fill="#FDAC0A" />
+                                </g>
+                            </svg>
+                            <span class="pulsable">/paula-miguel-alkemist/</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="columna-links title-5">
+                    <nav aria-label="Portfolio links">
+                        <p class="title-4" id="heading-portfolio">Portfolio</p>
+                        <ul aria-labelledby="heading-portfolio">
+                            <li><a href="uptak.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'uptak.html')">Uptak</a></li>
+                            <li><a href="campos.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'campos.html')">Campos</a></li>
+                            <li><a href="caceres-2031.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'caceres-2031.html')">Cáceres 31</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav aria-label="Secondary links">
+                        <p class="title-4" id="heading-paginas">Pages</p>
+                        <ul aria-labelledby="heading-paginas">
+                            <li><a href="index.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'index.html')">Home</a></li>
+                            <li><a href="about-me.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'about-me.html')">About me</a></li>
+                            <li><a href="career.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'career.html')">Career</a></li>
+                            <li><a href="portfolio.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'portfolio.html')">Portfolio</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="separador"></div>
+
+            <div class="legal">
+                <span>Copyright © Paula Miguel 2026. All rights reserved</span>
+                <div class="links-legal">
+                    <a href="privacy-policy.html" onclick="cambiarPagina(event, 'privacy-policy.html')"
+                        class="pulsable">Privacy Policy</a>
+                    <span aria-hidden="true"> &#9679; </span>
+                    <a href="legal-notice.html" onclick="cambiarPagina(event, 'legal-notice.html')" class="pulsable">Legal Notice</a>
+                    <span aria-hidden="true"> &#9679; </span>
+                    <a href="accessibility.html" onclick="cambiarPagina(event, 'accessibility.html')" class="pulsable">Accessibility</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../transicion.js"></script>
+    <style>
+        :root {
+            --gris: #4e4e4e;
+            --gris-2: #d6d6d6;
+            --principal-300: #99d2b5;
+            --principal-400: #88cf95;
+            --principal-500: #389060;
+            --principal-700: #158045;
+            --principal-800: #0a4525;
+            --color-fondo: #ffffff;
+            --color-contraste: #000000;
+            --conclusiones: #ffffff;
+        }
+    </style>
+</body>
+
+</html>

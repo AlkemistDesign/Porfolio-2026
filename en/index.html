@@ -1,43 +1,33 @@
 <!DOCTYPE html>
-<html class="" lang="es">
+<html class="" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Alkemist UX/UI</title>
-    <meta name="description" content="Soy Paula Miguel, diseñadora UX/UI. Diseño y desarrollo interfaces digitales accesibles de alto impacto visual y técnico. Conoce mi trabajo en Alkemist.">
-    <script>
-    if (!localStorage.getItem('idioma_seleccionado')) {
-        // Detectamos el idioma del navegador
-        var userLang = navigator.language || navigator.userLanguage;
-        
-        if (!userLang.startsWith('es')) {
-            window.location.replace('/en/index.html');
-        }
-    }
-    </script>
-    <link rel="preload" href="media/transicion-papel3.webm" as="video" type="video/webm">
-    <link rel="preload" href="fonts/MontserratAlternates-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/MontserratAlternates-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" type="image/png" href="media/favicon.png">
+    <meta name="description" content="I am Paula Miguel, a UX/UI designer. I design and develop highly visual and technical accessible digital interfaces. Discover my work at Alkemist.">
+    <link rel="preload" href="../media/transicion-papel3.webm" as="video" type="video/webm">
+    <link rel="preload" href="../fonts/MontserratAlternates-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/MontserratAlternates-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" type="image/png" href="../media/favicon.png">
 </head>
 
 <body>
     <div id="transition-overlay" style="background-color: #f0e2e1; opacity: 1; display: flex;" class="transition-overlay" aria-hidden="true">
         <button id="transition-play-btn" class="play-btn" style="display: none;">
-            Reproducir
+            Play
         </button>
         <video id="transition-video" autoplay muted playsinline preload="auto">
-            <source src="media/transicion-papel3.mov" type='video/quicktime; codecs="hvc1"'>
-            <source src="media/transicion-papel3.webm" type="video/webm">
+            <source src="../media/transicion-papel3.mov" type='video/quicktime; codecs="hvc1"'>
+            <source src="../media/transicion-papel3.webm" type="video/webm">
         </video>
     </div>
     
     <header>
-        <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
-        <a href="index.html" onclick="cambiarPagina(event, 'index.html')" aria-label="Inicio">
+        <a href="#contenido-principal" class="skip-link">Skip to main content</a>
+        <a href="index.html" onclick="cambiarPagina(event, 'index.html')" aria-label="Home">
             <svg id="logotipo" data-name="logotipo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1075 250"
                 aria-hidden="true" focusable="false">
                 <path class="logotipo"
@@ -61,17 +51,17 @@
             </svg>
         </a>
 
-        <nav class="desktop title-5" aria-label="Navegación principal">
+        <nav class="desktop title-5" aria-label="Main navigation">
             <ul>
-                <li><a href="sobre-mi.html" class="pulsable" onclick="cambiarPagina(event, 'sobre-mi.html')">Sobre
-                        mí</a></li>
-                <li><a href="trayectoria.html" class="pulsable"
-                        onclick="cambiarPagina(event, 'trayectoria.html')">Trayectoria</a></li>
+                <li><a href="about-me.html" class="pulsable" onclick="cambiarPagina(event, 'about-me.html')">About
+                        me</a></li>
+                <li><a href="career.html" class="pulsable"
+                        onclick="cambiarPagina(event, 'career.html')">Career</a></li>
 
                 <li class="portfolio-dropdown">
                     <a href="index.html" class="pulsable" id="portfolio-submenu-btn"
                         onclick="cambiarPagina(event, 'index.html')">Portfolio</a>
-                    <nav class="menu-desplegable sub-desktop" aria-label="Submenú de Portfolio">
+                    <nav class="menu-desplegable sub-desktop" aria-label="Portfolio Submenu">
                         <ul>
                             <li><a href="uptak.html" class="pulsable"
                                     onclick="cambiarPagina(event, 'uptak.html')">Uptak</a></li>
@@ -83,29 +73,29 @@
                     </nav>
                 </li>
 
-                <li><a href="contacto.html" class="btn btn-principal"
-                        onclick="cambiarPagina(event, 'contacto.html')">Contacto</a></li>
+                <li><a href="contact.html" class="btn btn-principal"
+                        onclick="cambiarPagina(event, 'contact.html')">Contact</a></li>
             </ul>
         </nav>
 
         <div class="mobile-menu">
-            <button type="button" class="btn-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false"
+            <button type="button" class="btn-hamburguesa" aria-label="Open navigation menu" aria-expanded="false"
                 aria-controls="menu-movil-lista">
                 <span class="l-1" aria-hidden="true"></span>
                 <span class="l-2" aria-hidden="true"></span>
                 <span class="l-3" aria-hidden="true"></span>
             </button>
 
-            <nav class="menu-desplegable title-5" id="menu-movil-lista" aria-label="Navegación móvil">
+            <nav class="menu-desplegable title-5" id="menu-movil-lista" aria-label="Mobile navigation">
                 <ul>
-                    <li><a href="sobre-mi.html" class="pulsable" onclick="cambiarPagina(event, 'sobre-mi.html')">Sobre
-                            mí</a></li>
-                    <li><a href="trayectoria.html" class="pulsable" onclick="cambiarPagina(event, 'trayectoria.html')">Trayectoria</a>
+                    <li><a href="about-me.html" class="pulsable" onclick="cambiarPagina(event, 'about-me.html')">About
+                            me</a></li>
+                    <li><a href="career.html" class="pulsable" onclick="cambiarPagina(event, 'career.html')">Career</a>
                     </li>
                     <li><a href="index.html" class="pulsable" onclick="cambiarPagina(event, 'index.html')">Portfolio</a>
                     </li>
-                    <li><a href="contacto.html" class="pulsable"
-                            onclick="cambiarPagina(event, 'contacto.html')">Contacto</a></li>
+                    <li><a href="contact.html" class="pulsable"
+                            onclick="cambiarPagina(event, 'contact.html')">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -116,10 +106,10 @@
         <main id="contenido-principal" class="contenido-pagina">
 
             <section class="presentacion">
-                <img class="foto-perfil" src="media/Foto de perfil.webp" alt="Fotografía de Paula Miguel" width="132px"
+                <img class="foto-perfil" src="../media/Foto de perfil.webp" alt="Photograph of Paula Miguel" width="132px"
                     height="132px" loading="lazy">
-                <h1 class="title-1">Soy Paula y mi trabajo es crear interfaces que <span>enamoran</span></h1>
-                <p class="texto">¿No me crees? Compruebalo ;)</p>
+                <h1 class="title-1">I'm Paula and my job is to create interfaces people <span>fall in love with</span></h1>
+                <p class="texto">Don't believe me? Check it out ;)</p>
             </section>
 
             <section class="porfolio" id="porfolio">
@@ -144,24 +134,24 @@
                     onclick="cambiarPagina(event, 'caceres-2031.html')">
                     <span class="texto-oculto">Cáceres 2031</span>
                     <div class="keywords texto">
-                        <div class="label">Accesibilidad</div>
+                        <div class="label">Accessibility</div>
                         <div class="label label-secundaria">Tokens</div>
                         <div class="label label-secundaria">Auto-Layout</div>
                     </div>
                 </a>
-                <a href="#" class="tarjeta-porfolio" id="" title="Próximamente" onclick="cambiarPagina(event, '')">
+                <a href="#" class="tarjeta-porfolio" id="" title="Coming soon" onclick="cambiarPagina(event, '')">
                     <!-- <div class="keywords texto">
                         <div class="label">Keyword</div>
                         <div class="label label-secundaria">Keyword</div>
                         <div class="label label-secundaria">Keyword</div>
                     </div> /-->
-                    <p class="title-5" style="color: white;margin-top: 50%;">PRÓXIMAMENTE</p>
+                    <p class="title-5" style="color: white;margin-top: 50%;">COMING SOON</p>
                 </a>
             </section>
 
             <section class="ventana">
                 <div class="interfaz-ventana">
-                    <p class="texto">Habilidades.jpg </p>
+                    <p class="texto">Skills.jpg </p>
                     <div class="iconos-interfaz">
                         <div class="icon-min"></div>
                         <div class="icon-max"></div>
@@ -170,8 +160,8 @@
                 </div>
                 <div class="contenido-ventana">
                     <div class="titulo-ventana">
-                        <h2 class="title-3">Mis habilidades</h2>
-                        <p class="texto">¿Qué se me sa bien? ¿En qué me especializo?</p>
+                        <h2 class="title-3">My skills</h2>
+                        <p class="texto">What am I good at? What do I specialize in?</p>
                     </div>
                     <div class="iconos-ventana">
                         <div class="iconos-caja">
@@ -187,8 +177,7 @@
                                 </g>
                             </svg>
                             <h3 class="title-5">Front-end</h3>
-                            <p class="texto">Tengo amplia experiencia en front-end, de hecho toda esta web está diseñada
-                                y desarrollada por mí.</p>
+                            <p class="texto">I have extensive front-end experience; in fact, this entire website was designed and developed by me.</p>
                         </div>
                         <div class="iconos-caja">
                             <svg width="78" height="78" viewBox="0 0 78 78" fill="none" aria-hidden="true"
@@ -202,8 +191,8 @@
                                         d="M14.5569 61.4623C13.1923 61.4623 12.0426 60.9946 11.1077 60.0591C10.1723 59.1243 9.70459 57.9746 9.70459 56.61V21.4002C9.70459 20.0357 10.2343 18.8234 11.2937 17.7634C12.3537 16.704 13.5659 16.1743 14.9305 16.1743H31.0425L37.5122 22.644H62.706C63.8221 22.644 64.7958 22.9457 65.6271 23.549C66.4585 24.1523 67.0402 24.9289 67.3723 25.8789H36.2118L29.7421 19.4092H14.9305C14.3498 19.4092 13.8727 19.5957 13.4991 19.9688C13.126 20.3424 12.9394 20.8196 12.9394 21.4002V56.2364C12.9394 56.693 13.0535 57.0664 13.2815 57.3564C13.5096 57.647 13.8102 57.8958 14.1832 58.1029L21.5118 33.5924H73.9666L66.6315 58.0349C66.3248 59.0631 65.7371 59.8915 64.8685 60.5201C63.9994 61.1482 63.0298 61.4623 61.9596 61.4623H14.5569ZM17.5556 58.2274H63.2042L69.5866 36.8272H23.9379L17.5556 58.2274Z" />
                                 </g>
                             </svg>
-                            <h3 class="title-5">Accesibilidad</h3>
-                            <p class="texto">Puedo realizar auditorías de accesibilidad complejas y diseños accesibles.</p>
+                            <h3 class="title-5">Accessibility</h3>
+                            <p class="texto">I can perform complex accessibility audits and create accessible designs.</p>
                         </div>
                         <div class="iconos-caja">
                             <svg width="78" height="78" viewBox="0 0 78 78" fill="none" aria-hidden="true"
@@ -217,8 +206,8 @@
                                         d="M16.784 36.2861L24.7094 39.639C25.7128 37.6318 26.8056 35.689 27.988 33.8106C29.1698 31.9317 30.4739 30.1048 31.9005 28.33L26.9366 27.3781C26.6045 27.2951 26.2829 27.3053 25.9718 27.4089C25.6607 27.5129 25.3809 27.6892 25.1324 27.9378L16.784 36.2861ZM27.2722 41.6924L36.4293 50.8308C38.9843 49.6776 41.5557 48.2114 44.1436 46.4322C46.7315 44.6531 49.2196 42.5693 51.608 40.1809C55.092 36.6969 57.7535 32.982 59.5925 29.036C61.432 25.09 62.4658 20.5332 62.6939 15.3655C57.5262 15.5936 52.9767 16.6274 49.0452 18.4669C45.1138 20.3059 41.4061 22.9674 37.9222 26.4513C35.5338 28.8397 33.45 31.3384 31.6708 33.9473C29.8917 36.5557 28.4255 39.1374 27.2722 41.6924ZM42.6071 30.5912C42.6071 29.2622 43.0818 28.1227 44.0312 27.1727C44.9812 26.2227 46.1341 25.7478 47.4901 25.7478C48.846 25.7478 49.999 26.2227 50.9489 27.1727C51.8989 28.1227 52.3739 29.2622 52.3739 30.5912C52.3739 31.9201 51.8989 33.0596 50.9489 34.0096C49.999 34.959 48.846 35.4337 47.4901 35.4337C46.1341 35.4337 44.9812 34.959 44.0312 34.0096C43.0818 33.0596 42.6071 31.9201 42.6071 30.5912ZM41.7733 61.3376L50.1216 52.9893C50.3702 52.7407 50.5465 52.4609 50.6505 52.1498C50.754 51.8387 50.7643 51.5171 50.6813 51.185L49.7294 46.2212C47.9545 47.6477 46.1277 48.9489 44.2488 50.1248C42.3704 51.3007 40.4276 52.3903 38.4204 53.3936L41.7733 61.3376ZM65.7177 12.3854C66.0783 18.3284 65.2373 23.7955 63.1945 28.7869C61.1522 33.7783 57.9702 38.4346 53.6484 42.7558C53.4414 42.9634 53.2549 43.1502 53.0888 43.3163C52.9227 43.4818 52.7362 43.6683 52.5292 43.8759L53.8352 50.5138C54.0094 51.3845 53.9762 52.2283 53.7358 53.0451C53.4953 53.8624 53.06 54.5862 52.4297 55.2165L40.6476 66.9363L35.285 54.3018L23.7576 42.7744L11.123 37.3504L22.8243 25.6297C23.4546 24.9994 24.1813 24.5536 25.0046 24.2921C25.8279 24.0311 26.6751 23.9877 27.5464 24.1619L34.308 25.5302C34.5156 25.3232 34.6919 25.1366 34.8369 24.9706C34.982 24.8045 35.1583 24.618 35.3658 24.411C39.6871 20.0892 44.3401 16.9145 49.325 14.8867C54.31 12.8585 59.7742 12.0247 65.7177 12.3854ZM16.5536 52.2986C17.8184 51.0338 19.356 50.4087 21.1665 50.4232C22.9769 50.4378 24.5145 51.0775 25.7794 52.3423C27.0442 53.6071 27.6736 55.1448 27.6677 56.9552C27.6612 58.7656 27.0256 60.3033 25.7608 61.5681C24.6614 62.6669 22.8979 63.6082 20.4702 64.3921C18.0419 65.176 15.2329 65.7173 12.0434 66.016C12.342 62.8265 12.8936 60.0178 13.698 57.59C14.5029 55.1617 15.4548 53.3979 16.5536 52.2986ZM18.8616 54.6504C18.2395 55.2725 17.6588 56.2875 17.1197 57.6952C16.5805 59.1034 16.2239 60.5561 16.0497 62.0533C17.5469 61.8792 18.9996 61.5153 20.4079 60.9616C21.8156 60.4079 22.8305 59.8199 23.4527 59.1978C24.0997 58.5508 24.4293 57.7793 24.4417 56.8832C24.4541 55.9877 24.1369 55.2165 23.4899 54.5695C22.8429 53.9225 22.0717 53.6125 21.1762 53.6395C20.2801 53.6664 19.5086 54.0034 18.8616 54.6504Z" />
                                 </g>
                             </svg>
-                            <h3 class="title-5">Autodidacta</h3>
-                            <p class="texto">Me encanta aprender, ya sea leer, ir a charlas o ver tutoriales: Siempre intento mejorarme como profesional.</p>
+                            <h3 class="title-5">Self-taught</h3>
+                            <p class="texto">I love learning, whether reading, attending talks, or watching tutorials. I always try to improve myself as a professional.</p>
                         </div>
                         <div class="iconos-caja">
                             <svg width="78" height="78" viewBox="0 0 78 78" fill="none" aria-hidden="true"
@@ -233,50 +222,46 @@
                                 </g>
                             </svg>
                             <h3 class="title-5">Hand-off</h3>
-                            <p class="texto">Mi experiencia en front-end me permite crear documentación y entregables claros para desarrollo.</p>
+                            <p class="texto">My front-end experience allows me to create clear documentation and deliverables for developers.</p>
                         </div>
                     </div>
-                    <p class="texto">¿Quieres conocerme mejor? <a class="enlace" href="sobre-mi.html" onclick="cambiarPagina(event, 'sobre-mi.html')">Saber más</a></p>
+                    <p class="texto">Want to know me better? <a class="enlace" href="about-me.html" onclick="cambiarPagina(event, 'about-me.html')">Learn more</a></p>
                 </div>
             </section>
 
             <section class="trayectoria">
                 <div class="titulo-trayectoria">
                     <div class="textos-trayectoria">
-                        <h2 class="title-2">Mi trayectoria</h2>
-                        <p>Lo cierto es que mis logros hablan más de mí que cualquier cosa que pueda explicar. </p>
+                        <h2 class="title-2">My career</h2>
+                        <p>The truth is, my achievements speak more about me than anything I could explain. </p>
                     </div>
-                    <a class="btn btn-principal" href="trayectoria.html"
-                        onclick="cambiarPagina(event, 'trayectoria.html')">Saber más...</a>
+                    <a class="btn btn-principal" href="career.html"
+                        onclick="cambiarPagina(event, 'career.html')">Learn more...</a>
                 </div>
                 <div class="tarjetas-trayectoria">
                     <div class="tarjeta-trayect">
-                        <div style="background-image: url(media/trayectoria/ESI.webp);">
+                        <div style="background-image: url(../media/trayectoria/ESI.webp);">
                             <div class="label">2025</div>
                         </div>
-                        <p>Volví a la misma universidad donde había terminado mis estudios, para dar clase de su nueva
-                            asignatura de diseño UX/UI...</p>
+                        <p>I returned to the same university where I finished my studies to teach their new UX/UI design course...</p>
                     </div>
                     <div class="tarjeta-trayect">
-                        <div style="background-image: url(media/trayectoria/foto\ baianai.webp);">
+                        <div style="background-image: url(../media/trayectoria/foto\ baianai.webp);">
                             <div class="label">2024</div>
                         </div>
-                        <p>Comencé a trabajar en BAIANAI SL como diseñadora UX/UI a tiempo completo. Tras haber
-                            realizado unas prácticas extracurriculares...</p>
+                        <p>I started working at BAIANAI SL as a full-time UX/UI designer. After completing an extracurricular internship...</p>
                     </div>
                     <div class="tarjeta-trayect">
-                        <div style="background-image: url(media/trayectoria/graduacion.webp);">
+                        <div style="background-image: url(../media/trayectoria/graduacion.webp);">
                             <div class="label">2024</div>
                         </div>
-                        <p>Finalizé la carrera universitaria de diseño gráfico en ESI Valladolid. Mi proyecto de TFG,
-                            Nikki, fue puntuado con la nota máxima...</p>
+                        <p>I finished my graphic design degree at ESI Valladolid. My final degree project, Nikki, received the maximum grade...</p>
                     </div>
                     <div class="tarjeta-trayect">
-                        <div style="background-image: url(media/trayectoria/ajedrez.webp);">
+                        <div style="background-image: url(../media/trayectoria/ajedrez.webp);">
                             <div class="label">2008</div>
                         </div>
-                        <p>Mi madre hizo un curso de HTML y CSS. Cuando me aburría cogía los manuales para luego
-                            escribir código, en papel. Cuando mi madre vió una libreta llena de HTML y garabatos...</p>
+                        <p>My mother took an HTML and CSS course. When I was bored, I would take the manuals and write code on paper. When my mother saw a notebook full of HTML and doodles...</p>
                     </div>
                 </div>
                 <div class="linea-tiempo">
@@ -303,17 +288,17 @@
             </section>
             <section class="cta">
                 <div>
-                    <img class="foto-perfil" src="media/Foto de perfil.webp" alt="Fotografía de Paula Miguel"
+                    <img class="foto-perfil" src="../media/Foto de perfil.webp" alt="Photograph of Paula Miguel"
                         width="200px" height="200px" loading="lazy">
                     <div class="contenido-cta">
-                        <h3 class="title-3">¿Suena bien?<span> Hablemos</span></h3>
-                        <p>Me encantaría conocerte, si quieres tener una conversación puedes encontrar como en la página de contacto.
+                        <h3 class="title-3">Sounds good?<span> Let's talk</span></h3>
+                        <p>I would love to meet you. If you'd like to have a chat, you can find how on the contact page.
                         </p>
                         <div class="botones-cta">
-                            <a href="contacto.html" class="btn btn-secundario"
-                                onclick="cambiarPagina(event, 'contacto.html')">Contacto</a>
-                            <a href="sobre-mi.html" class="btn btn-principal"
-                                onclick="cambiarPagina(event, 'sobre-mi.html')">Saber más</a>
+                            <a href="contact.html" class="btn btn-secundario"
+                                onclick="cambiarPagina(event, 'contact.html')">Contact</a>
+                            <a href="about-me.html" class="btn btn-principal"
+                                onclick="cambiarPagina(event, 'about-me.html')">Learn more</a>
                         </div>
                     </div>
                 </div>
@@ -345,7 +330,7 @@
                     </svg>
 
                     <div class="datos-contacto title-5">
-                        <a href="tel:+34633593246" aria-label="Llamar al teléfono +34 633 59 32 46">
+                        <a href="tel:+34633593246" aria-label="Call phone number +34 633 59 32 46">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_126" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -361,7 +346,7 @@
                             <span class="pulsable">+34 633 59 32 46</span>
                         </a>
 
-                        <a href="mailto:paula@alkemist.es" aria-label="Enviar correo electrónico a paula@alkemist.es">
+                        <a href="mailto:paula@alkemist.es" aria-label="Send an email to paula@alkemist.es">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_127" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -378,7 +363,7 @@
                         </a>
 
                         <a href="https://www.linkedin.com/in/paula-miguel-alkemist/"
-                            aria-label="Visitar perfil de LinkedIn de /paula-miguel-alkemist/">
+                            aria-label="Visit LinkedIn profile of /paula-miguel-alkemist/">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <mask id="mask0_103_128" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -397,7 +382,7 @@
                 </div>
 
                 <div class="columna-links title-5">
-                    <nav aria-label="Enlaces de proyectos">
+                    <nav aria-label="Portfolio Links">
                         <p class="title-4" id="heading-portfolio">Portfolio</p>
                         <ul aria-labelledby="heading-portfolio">
                             <li><a href="uptak.html" class="pulsable"
@@ -409,17 +394,17 @@
                         </ul>
                     </nav>
 
-                    <nav aria-label="Enlaces secundarios">
-                        <p class="title-4" id="heading-paginas">Páginas</p>
+                    <nav aria-label="Secondary links">
+                        <p class="title-4" id="heading-paginas">Pages</p>
                         <ul aria-labelledby="heading-paginas">
                             <li><a href="index.html" class="pulsable"
-                                    onclick="cambiarPagina(event, 'index.html')">Inicio</a></li>
-                            <li><a href="sobre-mi.html" class="pulsable"
-                                    onclick="cambiarPagina(event, 'sobre-mi.html')">Sobre mí</a></li>
-                            <li><a href="trayectoria.html" class="pulsable"
-                                    onclick="cambiarPagina(event, 'trayectoria.html')">Trayectoria</a></li>
+                                    onclick="cambiarPagina(event, 'index.html')">Home</a></li>
+                            <li><a href="about-me.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'about-me.html')">About me</a></li>
+                            <li><a href="career.html" class="pulsable"
+                                    onclick="cambiarPagina(event, 'career.html')">Career</a></li>
                             <li><a href="portfolio.html" class="pulsable"
-                                    onclick="cambiarPagina(event, 'portfolio.html')">Porfolio</a></li>
+                                    onclick="cambiarPagina(event, 'portfolio.html')">Portfolio</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -428,21 +413,20 @@
             <div class="separador"></div>
 
             <div class="legal">
-                <span>Copyright © Paula Miguel 2026. Todos los derechos reservados</span>
+                <span>Copyright © Paula Miguel 2026. All rights reserved.</span>
                 <div class="links-legal">
-                    <a href="politica-privacidad.html" onclick="cambiarPagina(event, 'politica-privacidad.html')"
-                        class="pulsable">Política de privacidad</a>
+                    <a href="privacy-policy.html" onclick="cambiarPagina(event, 'privacy-policy.html')"
+                        class="pulsable">Privacy Policy</a>
                     <span aria-hidden="true"> &#9679; </span>
-                    <a href="Aviso-legal.html" onclick="cambiarPagina(event, 'Aviso-legal.html')" class="pulsable">Aviso
-                        legal</a>
+                    <a href="legal-notice.html" onclick="cambiarPagina(event, 'legal-notice.html')" class="pulsable">Legal Notice</a>
                     <span aria-hidden="true"> &#9679; </span>
-                    <a href="accesibilidad.html" onclick="cambiarPagina(event, 'accesibilidad.html')" class="pulsable">Accesibilidad</a>
+                    <a href="accessibility.html" onclick="cambiarPagina(event, 'accessibility.html')" class="pulsable">Accessibility</a>
                 </div>
             </div>
         </footer>
     </div>
     
-    <script src="transicion.js"></script>
+    <script src="../transicion.js"></script>
 </body>
 
 </html>
